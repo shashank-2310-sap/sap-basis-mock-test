@@ -221,9 +221,6 @@ export function TestRunner() {
               <div className="scroll-slim max-h-[60vh] overflow-y-auto overscroll-contain px-1 py-1 pr-2 lg:max-h-none lg:min-h-0 lg:flex-1">
                 <Palette count={total} current={index} statuses={statuses} onJump={setIndex} />
               </div>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Blue = answered. Grey = not answered. Answers are revealed only after the test ends.
-              </p>
             </CardContent>
           </Card>
         </aside>
