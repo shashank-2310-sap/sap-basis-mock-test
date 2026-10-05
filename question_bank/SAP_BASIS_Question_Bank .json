@@ -1,0 +1,5317 @@
+{
+  "questions": [
+    {
+      "id": "C_TADM_23_Q001",
+      "question_number": 1,
+      "domain": "TADM10",
+      "question": "The SAP Fiori launchpad is working for your users. How can you enable access to the SAP Easy Access menu for them in the app finder? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "By providing an HTTP destination type H named FIORI_CLASSICUI_HTTPS (transaction SM59)"
+        },
+        {
+          "id": "B",
+          "text": "By applying the correct settings in the SAP Fiori launchpad configuration (transaction /UI2/FLP_SYS_CONF or /UI2/FLP_CUS_CONF)"
+        },
+        {
+          "id": "C",
+          "text": "By assigning the correct target mappings, shipped via catalog /UI2/CLASSICAL_GUI_MENU"
+        },
+        {
+          "id": "D",
+          "text": "By assigning the authorization to start transaction SEARCH_SAP_MENU"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning states Classic applications/Easy Access can be enabled through FLP configuration and/or target mappings; catalog /UI2/CLASSICAL_GUI_MENU supplies the classic GUI targets."
+    },
+    {
+      "id": "C_TADM_23_Q002",
+      "question_number": 2,
+      "domain": "TADM10",
+      "question": "What is the purpose of a security policy in an AS ABAP-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To create security-relevant system profile parameters"
+        },
+        {
+          "id": "B",
+          "text": "To specify user-specific system logon behaviour and password rules"
+        },
+        {
+          "id": "C",
+          "text": "To configure transport routes between SAP systems"
+        },
+        {
+          "id": "D",
+          "text": "To define database backup retention periods"
+        },
+        {
+          "id": "E",
+          "text": "To maintain SAP Gateway service activation settings"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "Security policy attributes control system behavior for password rules, password changes, and logon restrictions. When a security policy is assigned to a user master record, the policy defines that user's system behavior; the older profile parameters remain the fallback for users without an assigned security policy."
+    },
+    {
+      "id": "C_TADM_23_Q003",
+      "question_number": 3,
+      "domain": "TADM10",
+      "question": "Which operating system process initiates the start procedure of an AS Java-based SAP system instance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "saphostexec"
+        },
+        {
+          "id": "B",
+          "text": "sapstartsrv"
+        },
+        {
+          "id": "C",
+          "text": "sapcpe"
+        },
+        {
+          "id": "D",
+          "text": "jstart"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "For an AS Java-based SAP system, the sapstartsrv service initializes the Java Startup and Control Framework. The framework then starts and controls the Java instance processes; JSTART is the Java instance controller used within that framework."
+    },
+    {
+      "id": "C_TADM_23_Q004",
+      "question_number": 4,
+      "domain": "TADM10",
+      "question": "Which of the following protocols is SAP's RFC protocol based on? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "EDI"
+        },
+        {
+          "id": "B",
+          "text": "CPI-C"
+        },
+        {
+          "id": "C",
+          "text": "TCP/IP"
+        },
+        {
+          "id": "D",
+          "text": "OData"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C"
+      ],
+      "why": "SAP Help describes RFC as based on CPI-C and using TCP/IP transport."
+    },
+    {
+      "id": "C_TADM_23_Q005",
+      "question_number": 5,
+      "domain": "TADM10",
+      "question": "Which processes can run optionally as part of ABAP SAP Central Services (ASCS)? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "RFC Gateway"
+        },
+        {
+          "id": "B",
+          "text": "Message Server"
+        },
+        {
+          "id": "C",
+          "text": "Enqueue Server"
+        },
+        {
+          "id": "D",
+          "text": "SAP Web Dispatcher"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "D"
+      ],
+      "why": "SAP Help supports RFC Gateway on/associated with ASCS in configurable scenarios and also supports SAP Web Dispatcher in ASCS/SCS-related deployments; the exact setup is release/scenario dependent."
+    },
+    {
+      "id": "C_TADM_23_Q006",
+      "question_number": 6,
+      "domain": "TADM10",
+      "question": "You want to add an SAP Fiori space to a user's SAP Fiori Launchpad. To what do you have to assign the SAP Fiori space?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To a parameter ID of the user"
+        },
+        {
+          "id": "B",
+          "text": "To a role assigned to the user"
+        },
+        {
+          "id": "C",
+          "text": "To a user group assigned to the user"
+        },
+        {
+          "id": "D",
+          "text": "To an authorization profile assigned to the user"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP-owned SAP Community material says spaces/pages are assigned to business roles, and business roles are assigned to users."
+    },
+    {
+      "id": "C_TADM_23_Q007",
+      "question_number": 7,
+      "domain": "TADM10",
+      "question": "Your SAP S/4HANA Server system consists of an ABAP Central Services instance, a Primary Application Server instance, and two Additional Application Server instances. How many system profile files are evaluated for this SAP system during a complete system start?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Learning states one default profile plus one instance profile per instance are evaluated; 4 instances + 1 default profile = 5."
+    },
+    {
+      "id": "C_TADM_23_Q008",
+      "question_number": 8,
+      "domain": "TADM10",
+      "question": "You have passed the initial authentication for an SAP Fiori transactional app. Which authentication technology is used for subsequent OData calls of this app?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ABAP Session Security"
+        },
+        {
+          "id": "B",
+          "text": "SAML 2.0"
+        },
+        {
+          "id": "C",
+          "text": "X.509 Client Certificate Authentication"
+        },
+        {
+          "id": "D",
+          "text": "SAP Logon Ticket"
+        },
+        {
+          "id": "E",
+          "text": "Basic Authentication"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help documents ABAP Session Security for securing subsequent requests in Fiori scenarios."
+    },
+    {
+      "id": "C_TADM_23_Q009",
+      "question_number": 9,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based SAP system, where is the lock table stored?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Main memory of the host of the Central Services instance"
+        },
+        {
+          "id": "B",
+          "text": "Database table owned by the SAP schema"
+        },
+        {
+          "id": "C",
+          "text": "File system directory of the Primary Application Server"
+        },
+        {
+          "id": "D",
+          "text": "Shared memory of every application server instance"
+        },
+        {
+          "id": "E",
+          "text": "SAP HANA row store memory"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help places the lock table in shared/main memory of the enqueue server, which in the stated AS ABAP layout is hosted by Central Services."
+    },
+    {
+      "id": "C_TADM_23_Q010",
+      "question_number": 10,
+      "domain": "TADM10",
+      "question": "What are the start conditions of a background job in an AS ABAP-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Occurring of an event"
+        },
+        {
+          "id": "B",
+          "text": "Reaching a specific date and time"
+        },
+        {
+          "id": "C",
+          "text": "Starting the SAP system"
+        },
+        {
+          "id": "D",
+          "text": "Logging on to the SAP GUI"
+        },
+        {
+          "id": "E",
+          "text": "Creating a new transport request"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help lists date/time and event-based start conditions for background jobs."
+    },
+    {
+      "id": "C_TADM_23_Q011",
+      "question_number": 11,
+      "domain": "TADM10",
+      "question": "What are some start conditions of a background job in an AS ABAP-based SAP system? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Defining an external command"
+        },
+        {
+          "id": "B",
+          "text": "Switching the operation mode"
+        },
+        {
+          "id": "C",
+          "text": "Reaching a specific date and time"
+        },
+        {
+          "id": "D",
+          "text": "Triggering a background event"
+        },
+        {
+          "id": "E",
+          "text": "Creating a job server group"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C",
+        "D"
+      ],
+      "why": "SAP Help lists operation-mode, date/time, and event-based start conditions."
+    },
+    {
+      "id": "C_TADM_23_Q012",
+      "question_number": 12,
+      "domain": "TADM10",
+      "question": "What are start conditions of a background job in an AS ABAP-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Starting of a dynamic work process"
+        },
+        {
+          "id": "B",
+          "text": "Locking user DDIC in client 000"
+        },
+        {
+          "id": "C",
+          "text": "Ending of a predecessor job"
+        },
+        {
+          "id": "D",
+          "text": "Reaching a specific date and time"
+        }
+      ],
+      "correct_answers": [
+        "C",
+        "D"
+      ],
+      "why": "SAP Help lists 'after job' and date/time as start conditions."
+    },
+    {
+      "id": "C_TADM_23_Q013",
+      "question_number": 13,
+      "domain": "TADM10",
+      "question": "Which entity contains authorizations for users in an AS ABAP-based SAP System?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authorization Profile"
+        },
+        {
+          "id": "B",
+          "text": "User Master Record"
+        },
+        {
+          "id": "C",
+          "text": "Authorization Object"
+        },
+        {
+          "id": "D",
+          "text": "Role Menu"
+        },
+        {
+          "id": "E",
+          "text": "Transport Request"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help: authorization profiles contain authorizations and assign them to users through the user master record."
+    },
+    {
+      "id": "C_TADM_23_Q014",
+      "question_number": 14,
+      "domain": "TADM10",
+      "question": "You are running an AS ABAP-based SAP System. Which parts does the Internet Server Cache (ISC) of the ICM process consist of? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disk Cache"
+        },
+        {
+          "id": "B",
+          "text": "Memory Cache"
+        },
+        {
+          "id": "C",
+          "text": "UFO Cache"
+        },
+        {
+          "id": "D",
+          "text": "Browser Cache"
+        },
+        {
+          "id": "E",
+          "text": "Gateway Cache"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Help describes the ICM server cache as memory + disk caching and includes UFO caching."
+    },
+    {
+      "id": "C_TADM_23_Q015",
+      "question_number": 15,
+      "domain": "TADM10",
+      "question": "What can you configure by maintaining table HTTPURLLOC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The hostname of the URL launched by transaction /UI2/FLP"
+        },
+        {
+          "id": "B",
+          "text": "The SAP Gateway service activation status"
+        },
+        {
+          "id": "C",
+          "text": "The authentication method for SAP GUI users"
+        },
+        {
+          "id": "D",
+          "text": "The ICM HTTP port number"
+        },
+        {
+          "id": "E",
+          "text": "The SAP Fiori catalog assignment for end users"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help documents HTTPURLLOC for defining the host name used in SAP Fiori launchpad URLs."
+    },
+    {
+      "id": "C_TADM_23_Q016",
+      "question_number": 16,
+      "domain": "TADM10",
+      "question": "In an embedded deployment, which protocol is used by object pages to access the SAP S/4HANA system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OData"
+        },
+        {
+          "id": "B",
+          "text": "RFC"
+        },
+        {
+          "id": "C",
+          "text": "SOAP"
+        },
+        {
+          "id": "D",
+          "text": "HTTP RFC"
+        },
+        {
+          "id": "E",
+          "text": "IDoc"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning Fiori architecture materials describe OData as the service protocol used by Fiori apps to access S/4HANA business data."
+    },
+    {
+      "id": "C_TADM_23_Q017",
+      "question_number": 17,
+      "domain": "TADM10",
+      "question": "Which of the following background jobs has the lowest priority?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Class A job with a target server"
+        },
+        {
+          "id": "B",
+          "text": "Class B job with a target server"
+        },
+        {
+          "id": "C",
+          "text": "Class B job without a target server"
+        },
+        {
+          "id": "D",
+          "text": "Class C job with a target server"
+        },
+        {
+          "id": "E",
+          "text": "Class C job without a target server"
+        }
+      ],
+      "correct_answers": [
+        "E"
+      ],
+      "why": "SAP Learning defines Class A as highest, B as medium, C as normal priority, with targeted jobs handled preferentially within their class; therefore C without a target is lowest among the options."
+    },
+    {
+      "id": "C_TADM_23_Q018",
+      "question_number": 18,
+      "domain": "TADM10",
+      "question": "Which of the following background jobs has the highest priority?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Class A job without a target server"
+        },
+        {
+          "id": "B",
+          "text": "Class C job with a target server"
+        },
+        {
+          "id": "C",
+          "text": "Class C job without a target server"
+        },
+        {
+          "id": "D",
+          "text": "Class A job with a target server"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "Same SAP Learning background-processing rules make Class A with a target server the highest of the listed combinations."
+    },
+    {
+      "id": "C_TADM_23_Q019",
+      "question_number": 19,
+      "domain": "TADM10",
+      "question": "Which tools can be used to create SAP Fiori Catalogs? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP Fiori launchpad application manager, /UI2/FLPAM"
+        },
+        {
+          "id": "B",
+          "text": "SAP Fiori launchpad content manager, /UI2/FLPCM_CUST"
+        },
+        {
+          "id": "C",
+          "text": "SAP Fiori launchpad designer, /UI2/FLPD_CUST"
+        },
+        {
+          "id": "D",
+          "text": "SAP Gateway Service Builder, SEGW"
+        },
+        {
+          "id": "E",
+          "text": "SAP GUI Role Maintenance, PFCG"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning documents FLP content manager and FLP designer for business catalogs; its technical-catalog material also documents FLP application manager. FLPD is an older option and is not recommended for new use."
+    },
+    {
+      "id": "C_TADM_23_Q020",
+      "question_number": 20,
+      "domain": "TADM10",
+      "question": "Which steps are mandatory to configure an AS ABAP-based SAP system for outbound mail? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maintain the default domain, transaction SCOT"
+        },
+        {
+          "id": "B",
+          "text": "Maintain and activate an SMTP node, transaction SCOT"
+        },
+        {
+          "id": "C",
+          "text": "Maintain number ranges for outgoing e-mails, transaction SNRO"
+        },
+        {
+          "id": "D",
+          "text": "Configure SAPconnect routing in transaction STMS"
+        },
+        {
+          "id": "E",
+          "text": "Create a background job for database backups"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help's SMTP quick configuration uses the default domain and an active SMTP node in SCOT."
+    },
+    {
+      "id": "C_TADM_23_Q021",
+      "question_number": 21,
+      "domain": "TADM10",
+      "question": "What can you do to determine the SAPUI5 patch level in an AS ABAP-based SAP system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check the version of software component SAP_UI"
+        },
+        {
+          "id": "B",
+          "text": "Check the SAP kernel patch level in transaction SM51"
+        },
+        {
+          "id": "C",
+          "text": "Check the database revision in SAP HANA cockpit"
+        },
+        {
+          "id": "D",
+          "text": "Check the Support Package level of component SAP_BASIS only"
+        },
+        {
+          "id": "E",
+          "text": "Check the profile parameter icm/server_port"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help ties SAPUI5 version/patch information to software component SAP_UI."
+    },
+    {
+      "id": "C_TADM_23_Q022",
+      "question_number": 22,
+      "domain": "TADM10",
+      "question": "At system start, what is the correct parameter evaluation sequence in an AS Java-based SAP system? (sorted by read sequence)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Template Default -> Instance Default -> Template Custom -> Instance Custom"
+        },
+        {
+          "id": "B",
+          "text": "Instance Default -> Template Default -> Instance Custom -> Template Custom"
+        },
+        {
+          "id": "C",
+          "text": "Template Custom -> Instance Custom -> Template Default -> Instance Default"
+        },
+        {
+          "id": "D",
+          "text": "Instance Custom -> Template Custom -> Instance Default -> Template Default"
+        },
+        {
+          "id": "E",
+          "text": "Template Default -> Template Custom -> Instance Default -> Instance Custom"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning documents the AS Java parameter hierarchy: defaults are read first and custom instance/template values override lower-priority values. The bank's read sequence is consistent with that hierarchy."
+    },
+    {
+      "id": "C_TADM_23_Q023",
+      "question_number": 23,
+      "domain": "TADM10",
+      "question": "What is the correct parameter replacement sequence in an AS Java-based SAP system? (sorted by priority, highest to lowest)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Instance custom -> Template default -> Template custom"
+        },
+        {
+          "id": "B",
+          "text": "Template custom -> Instance custom -> Template default"
+        },
+        {
+          "id": "C",
+          "text": "Template default -> Template custom -> Instance custom"
+        },
+        {
+          "id": "D",
+          "text": "Instance custom -> Template custom -> Template default"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Learning documents custom instance values as highest priority, then custom template values, then template defaults."
+    },
+    {
+      "id": "C_TADM_23_Q024",
+      "question_number": 24,
+      "domain": "TADM10",
+      "question": "You have configured an SAP Web Dispatcher and set: wdisp/ssl_encrypt=2 and icm/server_port_<xx>=...PROT=HTTP. Which communication channels does this establish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HTTP between the client and SAP Web Dispatcher, HTTP between SAP Web Dispatcher and the SAP system"
+        },
+        {
+          "id": "B",
+          "text": "HTTPS between the client and SAP Web Dispatcher, HTTPS between SAP Web Dispatcher and the SAP system"
+        },
+        {
+          "id": "C",
+          "text": "HTTP between the client and SAP Web Dispatcher, HTTPS between SAP Web Dispatcher and the SAP system"
+        },
+        {
+          "id": "D",
+          "text": "HTTPS between the client and SAP Web Dispatcher, HTTP between SAP Web Dispatcher and the SAP system"
+        },
+        {
+          "id": "E",
+          "text": "RFC between the client and SAP Web Dispatcher, HTTP between SAP Web Dispatcher and the SAP system"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "New option lettering correctly places the supported combination at C. SAP Help explicitly maps PROT=HTTP with wdisp/ssl_encrypt=2 to HTTP client→Web Dispatcher and HTTPS Web Dispatcher→backend."
+    },
+    {
+      "id": "C_TADM_23_Q025",
+      "question_number": 25,
+      "domain": "TADM10",
+      "question": "How can you register multiple SAP Gateway services simultaneously? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using task list SAP_GATEWAY_ACTIVATE_ODATA_SERV"
+        },
+        {
+          "id": "B",
+          "text": "Using transaction /IWFND/MAINT_SERVICE"
+        },
+        {
+          "id": "C",
+          "text": "Using transaction SE80"
+        },
+        {
+          "id": "D",
+          "text": "Using transaction SPROXY"
+        },
+        {
+          "id": "E",
+          "text": "Using transaction ST22"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help documents the gateway activation task list for multiple OData services and the service-maintenance transaction for activation/registration."
+    },
+    {
+      "id": "C_TADM_23_Q026",
+      "question_number": 26,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based system, a user performs the second dialog step in a dialog transaction. The dialog work process used in the first dialog step is occupied by a different user. What happens with this second user request?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The request is processed by another free dialog work process"
+        },
+        {
+          "id": "B",
+          "text": "The request waits until the original dialog work process becomes free"
+        },
+        {
+          "id": "C",
+          "text": "The user session is terminated automatically"
+        },
+        {
+          "id": "D",
+          "text": "The transaction is restarted from the first dialog step"
+        },
+        {
+          "id": "E",
+          "text": "The request is processed by the enqueue work process"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning explains dialog-step multiplexing: consecutive dialog steps do not have to use the same dialog work process, so a free dialog work process can process the next step."
+    },
+    {
+      "id": "C_TADM_23_Q027",
+      "question_number": 27,
+      "domain": "TADM10",
+      "question": "In an SAP S/4HANA server system, which data can you NOT maintain for a technical user?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Address"
+        },
+        {
+          "id": "B",
+          "text": "User type"
+        },
+        {
+          "id": "C",
+          "text": "Validity period"
+        },
+        {
+          "id": "D",
+          "text": "Assigned roles"
+        },
+        {
+          "id": "E",
+          "text": "Logon data"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning states that, since S/4HANA 1909, technical users do not have a Business Partner and therefore do not have an Address tab."
+    },
+    {
+      "id": "C_TADM_23_Q028",
+      "question_number": 28,
+      "domain": "TADM10",
+      "question": "In an SAP S/4HANA server system, which data can you NOT maintain for a technical user?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Address"
+        },
+        {
+          "id": "B",
+          "text": "Group"
+        },
+        {
+          "id": "C",
+          "text": "Parameters"
+        },
+        {
+          "id": "D",
+          "text": "Roles"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "Technical users normally represent a machine or process rather than a person, so SAP does not typically maintain address data for them. Technical users can have parameters, but address data is not normally maintained for this user type."
+    },
+    {
+      "id": "C_TADM_23_Q029",
+      "question_number": 29,
+      "domain": "TADM10",
+      "question": "When restarting an Additional Application Server instance, which profiles are evaluated? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Default profile"
+        },
+        {
+          "id": "B",
+          "text": "Instance profile of the Additional Application Server"
+        },
+        {
+          "id": "C",
+          "text": "Start profile of the Central Services instance"
+        },
+        {
+          "id": "D",
+          "text": "Instance profile of the Primary Application Server"
+        },
+        {
+          "id": "E",
+          "text": "Transport profile, TP_DOMAIN_<SID>.PFL"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning's system-start procedure uses the default profile plus the specific instance profile when an application-server instance starts."
+    },
+    {
+      "id": "C_TADM_23_Q030",
+      "question_number": 30,
+      "domain": "TADM10",
+      "question": "In ABAP programs, what are features of ABAP SQL that are not available in native SQL? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use of the AS ABAP data buffer"
+        },
+        {
+          "id": "B",
+          "text": "Database independence"
+        },
+        {
+          "id": "C",
+          "text": "Direct execution of database-specific SQL syntax only"
+        },
+        {
+          "id": "D",
+          "text": "Bypassing the ABAP database interface completely"
+        },
+        {
+          "id": "E",
+          "text": "Mandatory use of database-specific stored procedures"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help distinguishes ABAP/Open SQL from native SQL: ABAP SQL retains ABAP DB-interface semantics, including DB independence and buffering where applicable."
+    },
+    {
+      "id": "C_TADM_23_Q031",
+      "question_number": 31,
+      "domain": "TADM10",
+      "question": "Which of the following is a command line tool to start or stop SAP systems and SAP instances?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAPControl"
+        },
+        {
+          "id": "B",
+          "text": "SAPCAR"
+        },
+        {
+          "id": "C",
+          "text": "SAPinst"
+        },
+        {
+          "id": "D",
+          "text": "HDBSQL"
+        },
+        {
+          "id": "E",
+          "text": "BRTOOLS"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help documents SAPControl as the command-line interface for starting/stopping SAP systems and instances."
+    },
+    {
+      "id": "C_TADM_23_Q032",
+      "question_number": 32,
+      "domain": "TADM10",
+      "question": "Which work process types can create spool requests? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Background"
+        },
+        {
+          "id": "B",
+          "text": "Dialog"
+        },
+        {
+          "id": "C",
+          "text": "Update"
+        },
+        {
+          "id": "D",
+          "text": "Enqueue"
+        },
+        {
+          "id": "E",
+          "text": "Gateway"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help's work-process documentation and spool processing guidance support dialog/background work processes creating/triggering spool output."
+    },
+    {
+      "id": "C_TADM_23_Q033",
+      "question_number": 33,
+      "domain": "TADM10",
+      "question": "You are installing a Primary Application Server and a Central Services Instance for an AS Java-based SAP system. What is the minimum number of Java server nodes you must configure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        },
+        {
+          "id": "E",
+          "text": "0"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning's AS Java architecture treats a server node as the basic server-process unit; a minimal Java application-server setup can therefore use one server node."
+    },
+    {
+      "id": "C_TADM_23_Q034",
+      "question_number": 34,
+      "domain": "TADM10",
+      "question": "You can use operation modes to change the quantity of which work process types? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dialog work process"
+        },
+        {
+          "id": "B",
+          "text": "Background work process"
+        },
+        {
+          "id": "C",
+          "text": "Update work process"
+        },
+        {
+          "id": "D",
+          "text": "Enqueue work process"
+        },
+        {
+          "id": "E",
+          "text": "Gateway work process"
+        },
+        {
+          "id": "F",
+          "text": "Spool work process"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning's operation-mode resource configuration covers dialog, background, and update work-process counts."
+    },
+    {
+      "id": "C_TADM_23_Q035",
+      "question_number": 35,
+      "domain": "TADM10",
+      "question": "Which instances have processes that establish a connection to the database of the SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Additional Application Server"
+        },
+        {
+          "id": "B",
+          "text": "Primary Application Server"
+        },
+        {
+          "id": "C",
+          "text": "Central Services instance"
+        },
+        {
+          "id": "D",
+          "text": "Web Dispatcher instance"
+        },
+        {
+          "id": "E",
+          "text": "SAProuter instance"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning distinguishes PAS/AAS instances, whose work processes establish database connections, from the Central Services instance."
+    },
+    {
+      "id": "C_TADM_23_Q036",
+      "question_number": 36,
+      "domain": "TADM10",
+      "question": "What are prerequisites for enabling communication between a standalone SAP Web Dispatcher and an AS ABAP-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identification of the HTTP(S) port of the ABAP message server"
+        },
+        {
+          "id": "B",
+          "text": "Activation of ICF service /sap/public/icf_info/icr_groups"
+        },
+        {
+          "id": "C",
+          "text": "Creation of a background job in transaction SM36"
+        },
+        {
+          "id": "D",
+          "text": "Configuration of SAP HANA system replication"
+        },
+        {
+          "id": "E",
+          "text": "Activation of SAP GUI scripting on the front-end client"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning Web Dispatcher communication material identifies the ABAP message server HTTP(S) endpoint and the ICF information service used to obtain server-group information."
+    },
+    {
+      "id": "C_TADM_23_Q037",
+      "question_number": 37,
+      "domain": "TADM10",
+      "question": "Which of these SAP systems is not an AS ABAP-based SAP system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP ECC"
+        },
+        {
+          "id": "B",
+          "text": "SAP S/4HANA"
+        },
+        {
+          "id": "C",
+          "text": "SAP Solution Manager ABAP"
+        },
+        {
+          "id": "D",
+          "text": "SAP BW"
+        },
+        {
+          "id": "E",
+          "text": "SAP EP"
+        }
+      ],
+      "correct_answers": [
+        "E"
+      ],
+      "why": "SAP Learning classifies ECC, S/4HANA, BW and Solution Manager ABAP as AS ABAP systems; Enterprise Portal is an AS Java-based system."
+    },
+    {
+      "id": "C_TADM_23_Q038",
+      "question_number": 38,
+      "domain": "TADM10",
+      "question": "Which software components (among others) can be found in every AS ABAP-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP_BASIS"
+        },
+        {
+          "id": "B",
+          "text": "SAP_ABA"
+        },
+        {
+          "id": "C",
+          "text": "SAP_UI"
+        },
+        {
+          "id": "D",
+          "text": "ST-PI"
+        },
+        {
+          "id": "E",
+          "text": "SAP_APPL"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning identifies SAP_BASIS and SAP_ABA as core software components of AS ABAP systems."
+    },
+    {
+      "id": "C_TADM_23_Q039",
+      "question_number": 39,
+      "domain": "TADM10",
+      "question": "The port for an ABAP dispatcher will be in the 32## number range. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help documents the ABAP dispatcher port in the 32NN range."
+    },
+    {
+      "id": "C_TADM_23_Q040",
+      "question_number": 40,
+      "domain": "TADM10",
+      "question": "Which process distributes the incoming requests to the available server processes in an AS Java-based SAP system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Internet Communication Manager, ICM"
+        },
+        {
+          "id": "B",
+          "text": "Enqueue Server"
+        },
+        {
+          "id": "C",
+          "text": "Message Server"
+        },
+        {
+          "id": "D",
+          "text": "SAP Gateway"
+        },
+        {
+          "id": "E",
+          "text": "Java Dispatcher"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning explains that ICM receives incoming requests in AS Java and dispatches them to server processes."
+    },
+    {
+      "id": "C_TADM_23_Q041",
+      "question_number": 41,
+      "domain": "TADM10",
+      "question": "Identify characteristics of the SAP NetWeaver Administrator tool. (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is accessed via a web browser interface"
+        },
+        {
+          "id": "B",
+          "text": "It allows access to the Configuration Wizard"
+        },
+        {
+          "id": "C",
+          "text": "It is used only through SAP GUI transaction codes"
+        },
+        {
+          "id": "D",
+          "text": "It replaces the SAP Transport Management System"
+        },
+        {
+          "id": "E",
+          "text": "It is used to install the SAP HANA database system"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help describes NWA as browser-based and exposes the Configuration Wizard through NWA."
+    },
+    {
+      "id": "C_TADM_23_Q042",
+      "question_number": 42,
+      "domain": "TADM10",
+      "question": "You use transaction OSS1 in your freshly installed AS ABAP-based SAP system. Which name will be used automatically for the generated RFC connection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAPOSS"
+        },
+        {
+          "id": "B",
+          "text": "SAPNET"
+        },
+        {
+          "id": "C",
+          "text": "OSS_RFC"
+        },
+        {
+          "id": "D",
+          "text": "SAP_SUPPORT"
+        },
+        {
+          "id": "E",
+          "text": "SAPROUTER"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning states that OSS1 historically created SAPOSS, but also records that SAPOSS/RFC-based OSS1 access stopped working in 2020; current SAP support uses HTTPS services rather than the old SAPOSS RFC."
+    },
+    {
+      "id": "C_TADM_23_Q043",
+      "question_number": 43,
+      "domain": "TADM10",
+      "question": "When defining a task within the Task Manager for Technical Configuration, you can select between several hundred predefined steps to include into your own task list. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning on automated setup says SAP ships hundreds of predefined setup steps that can be selected for task lists."
+    },
+    {
+      "id": "C_TADM_23_Q044",
+      "question_number": 44,
+      "domain": "TADM10",
+      "question": "When you use the SAP Consistency Check, which checks will be executed? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accessibility of the message server"
+        },
+        {
+          "id": "B",
+          "text": "Information about the enqueue service"
+        },
+        {
+          "id": "C",
+          "text": "Version compatibility between SAP release and operating system"
+        },
+        {
+          "id": "D",
+          "text": "Configuration of SAP Fiori launchpad catalogs"
+        },
+        {
+          "id": "E",
+          "text": "Creation of SAP HANA tenant database backups"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning consistency-check material covers message-server accessibility, enqueue-service information and release/OS compatibility checks."
+    },
+    {
+      "id": "C_TADM_23_Q045",
+      "question_number": 45,
+      "domain": "TADM10",
+      "question": "The central services instance of an AS Java 7.40 and above contains a gateway process. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning AS Java architecture identifies a gateway process in the central services instance for the stated release family."
+    },
+    {
+      "id": "C_TADM_23_Q046",
+      "question_number": 46,
+      "domain": "TADM10",
+      "question": "Which of the following options are benefits of SAProuter? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases network security"
+        },
+        {
+          "id": "B",
+          "text": "Simplifies network configuration"
+        },
+        {
+          "id": "C",
+          "text": "Required for remote support connections"
+        },
+        {
+          "id": "D",
+          "text": "Replaces the SAP Web Dispatcher for HTTP load balancing"
+        },
+        {
+          "id": "E",
+          "text": "Stores user master records for SAP systems"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning describes SAProuter as a network/security component, simplifies routing configuration and is used for SAP support connectivity."
+    },
+    {
+      "id": "C_TADM_23_Q047",
+      "question_number": 47,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based SAP system you have triggered a test print and you notice that no spool request has been generated. What does SAP recommend you check to analyse the issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transaction Dumps, ST22, and Application Log, SLG1"
+        },
+        {
+          "id": "B",
+          "text": "Spool Administration, SPAD, and Output Controller, SP01"
+        },
+        {
+          "id": "C",
+          "text": "System Log, SM21, and Update Requests, SM13"
+        },
+        {
+          "id": "D",
+          "text": "Background Job Overview, SM37, and RFC Connections, SM59"
+        },
+        {
+          "id": "E",
+          "text": "Transport Organizer, SE09, and User Maintenance, SU01"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help guidance for a missing spool request includes checking ST22 and SLG1 (plus system log in broader diagnostics); option A contains the key recommended checks."
+    },
+    {
+      "id": "C_TADM_23_Q048",
+      "question_number": 48,
+      "domain": "TADM10",
+      "question": "Which of the following actions can be executed in transaction Edit Profile Parameters (RZ11)? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Display the value of individual profile parameters"
+        },
+        {
+          "id": "B",
+          "text": "Change the values of dynamic profile parameters"
+        },
+        {
+          "id": "C",
+          "text": "Create a new instance profile permanently"
+        },
+        {
+          "id": "D",
+          "text": "Import a transport request into the SAP system"
+        },
+        {
+          "id": "E",
+          "text": "Maintain operation modes for work process switching"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help: RZ11 displays individual parameter documentation/current values and changes dynamically switchable parameters."
+    },
+    {
+      "id": "C_TADM_23_Q049",
+      "question_number": 49,
+      "domain": "TADM10",
+      "question": "From top to bottom, what is the hierarchy of the NetWeaver Administrator (NWA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Work Set -> Work Center -> Function"
+        },
+        {
+          "id": "B",
+          "text": "Work Center -> Function -> Work Set"
+        },
+        {
+          "id": "C",
+          "text": "Work Center -> Work Set -> Function"
+        },
+        {
+          "id": "D",
+          "text": "Function -> Work Center -> Work Set"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning's NWA navigation model is structured around Work Centers, Work Sets and Functions; the bank's top-down order is consistent with the documented model."
+    },
+    {
+      "id": "C_TADM_23_Q050",
+      "question_number": 50,
+      "domain": "TADM10",
+      "question": "Under which Java System Properties category do you find an AS Java-based Manager in the SAP NetWeaver Administrator (NWA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kernel"
+        },
+        {
+          "id": "B",
+          "text": "VM Environment"
+        },
+        {
+          "id": "C",
+          "text": "Applications"
+        },
+        {
+          "id": "D",
+          "text": "Services"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning's Java System Properties examples place manager-related properties under Kernel."
+    },
+    {
+      "id": "C_TADM_23_Q051",
+      "question_number": 51,
+      "domain": "TADM10",
+      "question": "In the role maintenance transaction (PFCG) of an AS ABAP-based SAP system, which step grants the authorizations of a role to a user master record?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assign a user to the role"
+        },
+        {
+          "id": "B",
+          "text": "Save the role"
+        },
+        {
+          "id": "C",
+          "text": "Generate the profile"
+        },
+        {
+          "id": "D",
+          "text": "Perform a user comparison"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Help says user comparison updates generated authorization profiles in the user master record."
+    },
+    {
+      "id": "C_TADM_23_Q052",
+      "question_number": 52,
+      "domain": "TADM10",
+      "question": "What happens when you execute a user comparison using transaction PFCG (Role Maintenance) in AS ABAP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Authorization objects are checked to find missing authorizations"
+        },
+        {
+          "id": "B",
+          "text": "Authorizations in the user master record of two different users are compared"
+        },
+        {
+          "id": "C",
+          "text": "Profiles are added/deleted from the user master record if required"
+        },
+        {
+          "id": "D",
+          "text": "Role menus are added to a user master record based on the assigned roles"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Help says user comparison adds/deletes profiles in the user master record as required."
+    },
+    {
+      "id": "C_TADM_23_Q053",
+      "question_number": 53,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based SAP system, you need to create a user that is not enabled for dialog interaction and is subject to the validity period of passwords. Which user type do you choose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Communications Data"
+        },
+        {
+          "id": "B",
+          "text": "Service"
+        },
+        {
+          "id": "C",
+          "text": "Reference"
+        },
+        {
+          "id": "D",
+          "text": "System"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning states Communications Data users are dialog-free while password validity rules still apply."
+    },
+    {
+      "id": "C_TADM_23_Q054",
+      "question_number": 54,
+      "domain": "TADM10",
+      "question": "During startup, an AS Java-based SAP system generates an error. Which file contains information about manager and services?",
+      "options": [
+        {
+          "id": "A",
+          "text": "dev_jstart"
+        },
+        {
+          "id": "B",
+          "text": "dev_icm"
+        },
+        {
+          "id": "C",
+          "text": "std_server<X>.out"
+        },
+        {
+          "id": "D",
+          "text": "jvm_bootstrap.out"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning's startup-monitoring material identifies std_server<X>.out as containing manager/service startup information."
+    },
+    {
+      "id": "C_TADM_23_Q055",
+      "question_number": 55,
+      "domain": "TADM10",
+      "question": "In which subdirectories of sapmnt can you find information about startup problems of an AS Java-based SAP system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "D<instance no.>/work"
+        },
+        {
+          "id": "B",
+          "text": "J<instance no.>/work"
+        },
+        {
+          "id": "C",
+          "text": "J<instance no.>/log"
+        },
+        {
+          "id": "D",
+          "text": "SCS<instance no.>/work"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "D"
+      ],
+      "why": "SAP Learning identifies J<instance>/work and SCS<instance>/work as locations containing startup-related logs."
+    },
+    {
+      "id": "C_TADM_23_Q056",
+      "question_number": 56,
+      "domain": "TADM10",
+      "question": "When using the Java Startup and Control Framework to shut down an AS Java-based SAP system, which of the following stops the server process(es)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Instance Controller"
+        },
+        {
+          "id": "B",
+          "text": "Database"
+        },
+        {
+          "id": "C",
+          "text": "ICM"
+        },
+        {
+          "id": "D",
+          "text": "sapstartsrv"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Learning states sapstartsrv controls start/stop of SAP systems and instances."
+    },
+    {
+      "id": "C_TADM_23_Q057",
+      "question_number": 57,
+      "domain": "TADM10",
+      "question": "You want to set up a printer locally on a Microsoft Windows-based AS ABAP. Which host spool access method must you use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "L"
+        },
+        {
+          "id": "B",
+          "text": "U"
+        },
+        {
+          "id": "C",
+          "text": "G"
+        },
+        {
+          "id": "D",
+          "text": "C"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Help documents host spool access method C for local Windows printing from an SAP system."
+    },
+    {
+      "id": "C_TADM_23_Q058",
+      "question_number": 58,
+      "domain": "TADM10",
+      "question": "You are working in an AS ABAP-based SAP system that runs on Linux. Where is the spool data stored when you use the value 'G' for the profile parameter rspo/store_location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/usr/sap/<SID>/D<nn>/work"
+        },
+        {
+          "id": "B",
+          "text": "/usr/sap/<SID>/sys/global"
+        },
+        {
+          "id": "C",
+          "text": "/usr/sap/<SID>/D<nn>/data"
+        },
+        {
+          "id": "D",
+          "text": "/usr/sap/<SID>/sys/profile"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Help states rspo/store_location=G stores spool data in the global directory under /usr/sap/<SID>/SYS/global."
+    },
+    {
+      "id": "C_TADM_23_Q059",
+      "question_number": 59,
+      "domain": "TADM10",
+      "question": "During the import of a transport request, which tools write log files to the tmp subdirectory of the transport directory? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "RDDMNTAB"
+        },
+        {
+          "id": "B",
+          "text": "R3load"
+        },
+        {
+          "id": "C",
+          "text": "R3trans"
+        },
+        {
+          "id": "D",
+          "text": "RDDMASGL"
+        },
+        {
+          "id": "E",
+          "text": "tp"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "why": "SAP Learning's import-process material identifies RDDMNTAB, RDDMASGL and R3trans among processes/tools that create logs in the transport tmp directory."
+    },
+    {
+      "id": "C_TADM_23_Q060",
+      "question_number": 60,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based SAP system, what can you use to change the value of a dynamically switchable parameter at runtime?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Report RSPFPAR"
+        },
+        {
+          "id": "B",
+          "text": "Transaction Edit profile parameters (RZ11)"
+        },
+        {
+          "id": "C",
+          "text": "Transaction Edit profiles (RZ10)"
+        },
+        {
+          "id": "D",
+          "text": "Command line tool sappfpar"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Help documents RZ11 for changing dynamically switchable parameters at runtime."
+    },
+    {
+      "id": "C_TADM_23_Q061",
+      "question_number": 61,
+      "domain": "TADM10",
+      "question": "You have restarted the primary application server instance. After the restart, change will take effect for which profiles? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Central services instance profile"
+        },
+        {
+          "id": "B",
+          "text": "Default profile"
+        },
+        {
+          "id": "C",
+          "text": "Additional Application server instance profile"
+        },
+        {
+          "id": "D",
+          "text": "Primary Application Server instance profile"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "D"
+      ],
+      "why": "SAP Help profile evaluation rules support default profile + the instance profile of the restarted PAS."
+    },
+    {
+      "id": "C_TADM_23_Q062",
+      "question_number": 62,
+      "domain": "TADM10",
+      "question": "In an AS ABAP-based system, you are printing a list to a remote printer (host spool access method S or U) using SAP GUI. What route does the printing data take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dialog Workprocess -> TemSe -> Spool Workprocess -> Printer"
+        },
+        {
+          "id": "B",
+          "text": "Spool Workprocess -> TemSe -> Printer"
+        },
+        {
+          "id": "C",
+          "text": "Dialog Workprocess -> Spool Workprocess -> TemSe -> Printer"
+        },
+        {
+          "id": "D",
+          "text": "Spool Workprocess -> TemSe -> Dispatcher -> Printer"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning's spool/printing architecture is consistent with dialog work process -> spool work process -> TemSe -> printer for remote host-spool access."
+    },
+    {
+      "id": "C_TADM_23_Q063",
+      "question_number": 63,
+      "domain": "TADM10",
+      "question": "Using the Java Startup and Control Framework, what is the correct sequence of steps to start an application server of an AS Java-based SAP system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Start Offline Deployment -> Start bootstrap process -> Start ICM/Server process(es) -> Connect to SCS instance"
+        },
+        {
+          "id": "B",
+          "text": "Connect to SCS instance -> Start Offline Deployment -> Start bootstrap process -> Start ICM/Server process(es)"
+        },
+        {
+          "id": "C",
+          "text": "Start ICM/Server process(es) -> Start Offline Deployment -> Start bootstrap process -> Connect to SCS instance"
+        },
+        {
+          "id": "D",
+          "text": "Connect to SCS instance -> Start bootstrap process -> Start Offline Deployment -> Start ICM/Server process(es)"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning's AS Java start/stop material describes connecting to SCS, then starting offline deployment/bootstrap and finally ICM/server processes."
+    },
+    {
+      "id": "C_TADM_23_Q064",
+      "question_number": 64,
+      "domain": "TADM10",
+      "question": "Which changes in an AS Java-based SAP System require a restart of the affected server process(es) before they will take effect? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A change of a manager property value"
+        },
+        {
+          "id": "B",
+          "text": "A change of the key phrase"
+        },
+        {
+          "id": "C",
+          "text": "A change of the UME data source(s)"
+        },
+        {
+          "id": "D",
+          "text": "A change of a Service property value"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning's AS Java configuration material treats security key-phrase/UME data-source changes as restart-relevant, unlike ordinary dynamic manager/service properties."
+    },
+    {
+      "id": "C_TADM_23_Q065",
+      "question_number": 65,
+      "domain": "TADM10",
+      "question": "You want to enable the context sensitive user assistance in the SAP Fiori launchpad. Where are the help texts persisted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the BES system"
+        },
+        {
+          "id": "B",
+          "text": "At a separate web server"
+        },
+        {
+          "id": "C",
+          "text": "At the SAP web dispatcher"
+        },
+        {
+          "id": "D",
+          "text": "At the FES System"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "Older SAP-owned Fiori training describes user-assistance/help texts being persisted on a separate web server. Current Fiori versions and architectures can differ, so the bank's unqualified answer should not be treated as universally current."
+    },
+    {
+      "id": "C_TADM_23_Q066",
+      "question_number": 66,
+      "domain": "TADM10",
+      "question": "In addition to a transaction code, what is required to define the target mapping for a single ABAP transaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ICF service URL"
+        },
+        {
+          "id": "B",
+          "text": "Application Configuration"
+        },
+        {
+          "id": "C",
+          "text": "SAP Gateway Service"
+        },
+        {
+          "id": "D",
+          "text": "System Alias"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Help target-mapping guidance requires the system alias together with the transaction code for an ABAP transaction target mapping."
+    },
+    {
+      "id": "C_TADM_23_Q067",
+      "question_number": 67,
+      "domain": "TADM10",
+      "question": "What can you configure in transaction SICF on the error pages tab of an ICF service? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Logon errors"
+        },
+        {
+          "id": "B",
+          "text": "Logon procedure"
+        },
+        {
+          "id": "C",
+          "text": "GUI interface"
+        },
+        {
+          "id": "D",
+          "text": "Logoff Page"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "D"
+      ],
+      "why": "SAP Help's ICF error-page configuration includes logon errors and the logoff page."
+    },
+    {
+      "id": "C_TADM_23_Q068",
+      "question_number": 68,
+      "domain": "TADM10",
+      "question": "In an SAP Fiori app, what is used as source for the data in a dynamic tile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "InA"
+        },
+        {
+          "id": "B",
+          "text": "OData"
+        },
+        {
+          "id": "C",
+          "text": "RFC"
+        },
+        {
+          "id": "D",
+          "text": "BSP"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Help describes dynamic Fiori tile data sourced through OData in the relevant app scenarios."
+    },
+    {
+      "id": "C_TADM_23_Q069",
+      "question_number": 69,
+      "domain": "TADM10",
+      "question": "What is the database equivalent to an ABAP Managed Database Procedure (AMDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Function import"
+        },
+        {
+          "id": "B",
+          "text": "Aggregate function"
+        },
+        {
+          "id": "C",
+          "text": "Stored Procedure"
+        },
+        {
+          "id": "D",
+          "text": "Guided Procedure"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning's ABAP/AMDP material equates an AMDP implementation with a database stored procedure on SAP HANA."
+    },
+    {
+      "id": "C_TADM_23_Q070",
+      "question_number": 70,
+      "domain": "TADM10",
+      "question": "What does task list SAP_ESH_INITIAL_SETUP_WRK_CLIENT do? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activate OData services for SAP Fiori search"
+        },
+        {
+          "id": "B",
+          "text": "Create and index connectors"
+        },
+        {
+          "id": "C",
+          "text": "Create an RFC destination to the FES system"
+        },
+        {
+          "id": "D",
+          "text": "Activate ICF services for ESH"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "D"
+      ],
+      "why": "SAP Learning says task list SAP_ESH_INITIAL_SETUP_WRK_CLIENT creates/configures search connectors and activates required ESH ICF services."
+    },
+    {
+      "id": "C_TADM_23_Q071",
+      "question_number": 71,
+      "domain": "TADM10",
+      "question": "Which of the following changes to the SAP Fiori launchpad can be transported using a transport request of type workbench?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configuration changes to SAP Fiori Catalogs and groups"
+        },
+        {
+          "id": "B",
+          "text": "Theme design changes"
+        },
+        {
+          "id": "C",
+          "text": "Customizing changes to SAP Fiori catalogs and groups"
+        },
+        {
+          "id": "D",
+          "text": "Personalization changes"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning distinguishes configuration transported with workbench requests from customizing transported with customizing requests; the stated Fiori catalog/group configuration belongs to the workbench case."
+    },
+    {
+      "id": "C_TADM_23_Q072",
+      "question_number": 72,
+      "domain": "TADM10",
+      "question": "What are some of the steps to implement a transactional SAP Fiori app in a central hub deployment? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activate the relevant ICF service for SAPUI5 in the FES system"
+        },
+        {
+          "id": "B",
+          "text": "Activate the relevant OData service in the FES system"
+        },
+        {
+          "id": "C",
+          "text": "Activate the relevant ICF service for SAPUI5 in the BES system"
+        },
+        {
+          "id": "D",
+          "text": "Activate the relevant OData service in the BES system"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help shows that in a central-hub landscape UIs are on the FES while OData services are associated with backend systems; specific SAP Solution Manager Fiori implementation pages can also have OData activation steps on the FES. Therefore the bank's A+B pair is not universally valid without naming the product/version/landscape."
+    },
+    {
+      "id": "C_TADM_23_Q073",
+      "question_number": 73,
+      "domain": "TADM10",
+      "question": "You want to configure notification for SAP Fiori. Which of the following steps do you have to perform in the FES system? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Register the desired notification providers"
+        },
+        {
+          "id": "B",
+          "text": "Activate the ICF service /sap/opu/odata4 for OData V4"
+        },
+        {
+          "id": "C",
+          "text": "Publish service group /IWNGW/NOTIFICATION"
+        },
+        {
+          "id": "D",
+          "text": "Maintain and activate push channel with ID SAP_WEBSOCKET"
+        },
+        {
+          "id": "E",
+          "text": "Activate the OData service /UI2/INTEROP"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C",
+        "D"
+      ],
+      "why": "SAP Learning Fiori notification setup covers the OData V4 endpoint, Notification service group publication and SAP_WEBSOCKET push-channel configuration."
+    },
+    {
+      "id": "C_TADM_23_Q074",
+      "question_number": 74,
+      "domain": "TADM10",
+      "question": "In an SAP Fiori app, what does an intent-based navigation consist of? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Target URL"
+        },
+        {
+          "id": "B",
+          "text": "Semantic object"
+        },
+        {
+          "id": "C",
+          "text": "Application name"
+        },
+        {
+          "id": "D",
+          "text": "Action"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "D"
+      ],
+      "why": "SAP Learning defines intent as semantic object + action."
+    },
+    {
+      "id": "C_TADM_23_Q075",
+      "question_number": 75,
+      "domain": "TADM10",
+      "question": "What are the advantages of using central hub deployment in an SAP Fiori environment compared to embedded deployment? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Better performance by reducing the number of remote function calls"
+        },
+        {
+          "id": "B",
+          "text": "Independent lifecycles of SAPUI5 Applications and back-end implementations"
+        },
+        {
+          "id": "C",
+          "text": "Improved data changes tracking when using a single service user in the BES system"
+        },
+        {
+          "id": "D",
+          "text": "Improved Security for internet-facing scenarios"
+        },
+        {
+          "id": "E",
+          "text": "Support of routing and composition of multiple BES Systems"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "D",
+        "E"
+      ],
+      "why": "SAP Help's central-hub deployment advantages include decoupled lifecycle, better security, and routing/composition of multiple systems."
+    },
+    {
+      "id": "C_TADM_23_Q076",
+      "question_number": 76,
+      "domain": "TADM10",
+      "question": "You want to enable HTTPS between the SAP Web Dispatcher and the FES System. What are some of the steps you need to perform? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the SAP Web Dispatcher's client PSE import the CA root certificate used for the FES server PSE"
+        },
+        {
+          "id": "B",
+          "text": "In the SAP Web Dispatcher's server PSE import a signed server certificate to the PSE management"
+        },
+        {
+          "id": "C",
+          "text": "In the FES system create a new key pair in the SAPSSLS view of the PSE management"
+        },
+        {
+          "id": "D",
+          "text": "In the FES system determine the signer of SSL server certificates used for the FES Server PSE"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "For Web Dispatcher→FES HTTPS, SAP Learning describes the Web Dispatcher as SSL client and uses the client PSE trust chain; the server PSE is for inbound HTTPS."
+    },
+    {
+      "id": "C_TADM_23_Q077",
+      "question_number": 77,
+      "domain": "TADM10",
+      "question": "In an SAP S/4HANA system, a target system alias FIORI is maintained for source system alias S4FIN. Which connection is relevant for the extraction of back-end catalogs with alias S4FIN?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S4FIN_HTTPS"
+        },
+        {
+          "id": "B",
+          "text": "FIORI_HTTPS"
+        },
+        {
+          "id": "C",
+          "text": "S4FIN_RFC"
+        },
+        {
+          "id": "D",
+          "text": "FIORI_RFC"
+        },
+        {
+          "id": "E",
+          "text": "LOCAL_HTTP"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "Source-system alias S4FIN maps to its concrete HTTPS connection S4FIN_HTTPS; the target alias FIORI does not replace the source alias in that mapping."
+    },
+    {
+      "id": "C_TADM_23_Q078",
+      "question_number": 78,
+      "domain": "TADM10",
+      "question": "What actions can you perform using the SAP_FIORI_FOUNDATION_S4 task list? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replicate back-end catalogs"
+        },
+        {
+          "id": "B",
+          "text": "Generate SAP Fiori foundation roles"
+        },
+        {
+          "id": "C",
+          "text": "Enable SAP GUI for HTML"
+        },
+        {
+          "id": "D",
+          "text": "Create SAP HANA tenant databases"
+        },
+        {
+          "id": "E",
+          "text": "Configure Transport Management System routes"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "All three selected actions are supported by the task list documentation. The SAP_FIORI_FOUNDATION_S4 task list activates UI services including SAP GUI for HTML, initializes/replicates Fiori foundation content and generates Fiori roles."
+    },
+    {
+      "id": "C_TADM_23_Q079",
+      "question_number": 79,
+      "domain": "TADM10",
+      "question": "You want to perform rapid activation for SAP Fiori. In what order should you run the task lists?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP_GW_FIORI_ERP_ONE_CLNT_SETUP -> SAP_FIORI_FOUNDATION_S4 -> SAP_FIORI_CONTENT_ACTIVATION"
+        },
+        {
+          "id": "B",
+          "text": "SAP_FIORI_CONTENT_ACTIVATION -> SAP_FIORI_FOUNDATION_S4 -> SAP_GW_FIORI_ERP_ONE_CLNT_SETUP"
+        },
+        {
+          "id": "C",
+          "text": "SAP_FIORI_FOUNDATION_S4    -> SAP_GW_FIORI_ERP_ONE_CLNT_SETUP                              -> SAP_FIORI_CONTENT_ACTIVATION"
+        },
+        {
+          "id": "D",
+          "text": "SAP_GW_FIORI_ERP_ONE_CLNT_SETUP -> SAP_FIORI_CONTENT_ACTIVATION -> SAP_FIORI_FOUNDATION_S4"
+        },
+        {
+          "id": "E",
+          "text": "SAP_FIORI_FOUNDATION_S4 -> SAP_FIORI_CONTENT_ACTIVATION -> SAP_GW_FIORI_ERP_ONE_CLNT_SETUP"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning explicitly gives the rapid-activation order used by answer A."
+    },
+    {
+      "id": "C_TADM_23_Q080",
+      "question_number": 80,
+      "domain": "TADM12",
+      "question": "Which of the following tools are used when importing a transport request? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "R3trans"
+        },
+        {
+          "id": "B",
+          "text": "RDDIMPDP"
+        },
+        {
+          "id": "C",
+          "text": "RDDNEWPP"
+        },
+        {
+          "id": "D",
+          "text": "R3load"
+        },
+        {
+          "id": "E",
+          "text": "TP"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "E"
+      ],
+      "why": "SAP Help transport processing references tp/R3trans and the RDDIMPDP background job as part of transport import processing."
+    },
+    {
+      "id": "C_TADM_23_Q081",
+      "question_number": 81,
+      "domain": "TADM12",
+      "question": "When importing a transport request, which steps are executed by a batch job? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activation of dictionary objects"
+        },
+        {
+          "id": "B",
+          "text": "Import of dictionary objects"
+        },
+        {
+          "id": "C",
+          "text": "Distribution of dictionary objects"
+        },
+        {
+          "id": "D",
+          "text": "Move nametabs"
+        },
+        {
+          "id": "E",
+          "text": "Release of the transport request"
+        },
+        {
+          "id": "F",
+          "text": "Creation of the cofile"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "why": "Activation & Distribution of dictionary objects, and Move nametabs are executed by batch jobs. These ABAP Dictionary steps are performed inside the SAP system using the background dispatcher job RDDIMPDP."
+    },
+    {
+      "id": "C_TADM_23_Q082",
+      "question_number": 82,
+      "domain": "TADM12",
+      "question": "You want to create an ABAP task list in a development system to transport it to the production system. What must you do? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assign the task list to a package"
+        },
+        {
+          "id": "B",
+          "text": "Assign the task list to a workbench transport request"
+        },
+        {
+          "id": "C",
+          "text": "Assign the task list to a customizing transport request"
+        },
+        {
+          "id": "D",
+          "text": "Activate the task list"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning development-transport guidance requires the task list to be assigned to a package and captured in a workbench request for transport."
+    },
+    {
+      "id": "C_TADM_23_Q083",
+      "question_number": 83,
+      "domain": "TADM12",
+      "question": "When releasing a workbench request from the development system, what are the prerequisites for an export to take place? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A consolidation route from the development system to a subsequent system must exist"
+        },
+        {
+          "id": "B",
+          "text": "All repository objects within the Workbench request must be assigned to a package"
+        },
+        {
+          "id": "C",
+          "text": "All repository objects within the Workbench request must be assigned to the same transport layer"
+        },
+        {
+          "id": "D",
+          "text": "The target system must be configured as a virtual system only"
+        },
+        {
+          "id": "E",
+          "text": "The Workbench request must contain only customizing table entries"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning transport-creation material requires package assignment, a valid/common transport layer and a consolidation route for export."
+    },
+    {
+      "id": "C_TADM_23_Q084",
+      "question_number": 84,
+      "domain": "TADM12",
+      "question": "What is the definition of 'Transport Group' in Transport Management System (TMS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collection of SAP systems that share the same transport directory"
+        },
+        {
+          "id": "B",
+          "text": "A group of transport requests assigned to the same project"
+        },
+        {
+          "id": "C",
+          "text": "A set of SAP users authorized to release transport requests"
+        },
+        {
+          "id": "D",
+          "text": "A sequence of systems used for development, quality assurance, and production"
+        },
+        {
+          "id": "E",
+          "text": "A configuration group used to define RFC destinations between SAP systems"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help defines a transport group as systems sharing the same transport directory."
+    },
+    {
+      "id": "C_TADM_23_Q085",
+      "question_number": 85,
+      "domain": "TADM12",
+      "question": "Using standard transport protocol settings, after importing a transport request, which log file provides the return codes of the individual import steps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ALOG"
+        },
+        {
+          "id": "B",
+          "text": "SLOG"
+        },
+        {
+          "id": "C",
+          "text": "ULOG"
+        },
+        {
+          "id": "D",
+          "text": "RDDIMPDP"
+        },
+        {
+          "id": "E",
+          "text": "TP_DOMAIN"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help transport logging documents ALOG as the log containing return codes for individual import steps."
+    },
+    {
+      "id": "C_TADM_23_Q086",
+      "question_number": 86,
+      "domain": "TADM12",
+      "question": "You are logged onto an AS ABAP-based SAP system. What happens when you release a task of a transport request that contains changes to a program?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The object list of the task is handed over to the transport request"
+        },
+        {
+          "id": "B",
+          "text": "The transport request is automatically imported into the quality system"
+        },
+        {
+          "id": "C",
+          "text": "The program is deleted from the development system"
+        },
+        {
+          "id": "D",
+          "text": "The transport request is immediately released together with the task"
+        },
+        {
+          "id": "E",
+          "text": "The task is converted into a customizing request"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help says releasing a task hands its object list to the transport request."
+    },
+    {
+      "id": "C_TADM_23_Q087",
+      "question_number": 87,
+      "domain": "TADM12",
+      "question": "You are using a standard three system landscape, DEV, QAS, and PRD. When will a change of a repository object in the QAS system be treated as correction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "If the original system of the object is QAS"
+        },
+        {
+          "id": "B",
+          "text": "If the object was transported from DEV to QAS"
+        },
+        {
+          "id": "C",
+          "text": "If the object is assigned to a customizing request"
+        },
+        {
+          "id": "D",
+          "text": "If the object is locked in a transport request in DEV"
+        },
+        {
+          "id": "E",
+          "text": "If the object exists in both QAS and PROD"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning explains that changes to an object in its original system are corrections; therefore an object whose original system is QAS is treated as a correction there."
+    },
+    {
+      "id": "C_TADM_23_Q088",
+      "question_number": 88,
+      "domain": "TADM12",
+      "question": "How does a Transport of Copies differ from a Workbench Request? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "No cofile is created when releasing the transport request with the Transport Organizer (SE09)"
+        },
+        {
+          "id": "B",
+          "text": "When importing, the transport request is not forwarded to subsequent delivery systems"
+        },
+        {
+          "id": "C",
+          "text": "Repository objects in a Transport of Copies are automatically deleted after import"
+        },
+        {
+          "id": "D",
+          "text": "A Transport of Copies can only contain customizing table entries"
+        },
+        {
+          "id": "E",
+          "text": "A Transport of Copies always requires a consolidation route before it can be released"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help distinguishes Transport of Copies by classifying imported repository objects as copies and by not forwarding the request to subsequent delivery systems."
+    },
+    {
+      "id": "C_TADM_23_Q089",
+      "question_number": 89,
+      "domain": "TADM12",
+      "question": "Using standard tp settings, what are features of transport strategy 'Queue-Driven Transports, Mass Transports' but NOT of 'Queue-Driven Transports, Single Transports'? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Import All Requests function is available"
+        },
+        {
+          "id": "B",
+          "text": "Using the Import Requests function causes the imported transport requests to remain in the import queue"
+        },
+        {
+          "id": "C",
+          "text": "The import process can be scheduled in the background"
+        },
+        {
+          "id": "D",
+          "text": "Transport requests are imported automatically when they are released"
+        },
+        {
+          "id": "E",
+          "text": "Transport requests can only be imported one at a time"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning says Mass Transports keep imported requests in the queue when Import Request is used, provide Import All Requests, and support background scheduling."
+    },
+    {
+      "id": "C_TADM_23_Q090",
+      "question_number": 90,
+      "domain": "TADM12",
+      "question": "When performing a local client copy with transaction SCCLN, in which client is it recommended to start the client copy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The source client"
+        },
+        {
+          "id": "B",
+          "text": "A client different from both the source client and the target client"
+        },
+        {
+          "id": "C",
+          "text": "The target client"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning recommends starting a local client copy from a client different from both source and target."
+    },
+    {
+      "id": "C_TADM_23_Q091",
+      "question_number": 91,
+      "domain": "TADM12",
+      "question": "When performing a local client copy, which client copy profiles are available? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Customizing, User Master Records and User Variants"
+        },
+        {
+          "id": "B",
+          "text": "User Master Records and Authorization Profiles"
+        },
+        {
+          "id": "C",
+          "text": "All Client-Specific Data without Change Documents"
+        },
+        {
+          "id": "D",
+          "text": "Cross-Client Repository Objects and Programs"
+        },
+        {
+          "id": "E",
+          "text": "SAP Kernel Files and Instance Profiles"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning documents the standard local client-copy profiles around all client-specific data, customizing/user master/variants, and user master/authorization profiles."
+    },
+    {
+      "id": "C_TADM_23_Q092",
+      "question_number": 92,
+      "domain": "TADM12",
+      "question": "Which actions can be performed with the Software Update Manager (SUM) for an AS ABAP-based SAP system? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Setting up the Transport Management System (TMS)"
+        },
+        {
+          "id": "B",
+          "text": "Applying a SPAM/SAINT update"
+        },
+        {
+          "id": "C",
+          "text": "Applying an SAP kernel patch"
+        },
+        {
+          "id": "D",
+          "text": "Creating SAP HANA tenant databases"
+        },
+        {
+          "id": "E",
+          "text": "Maintaining SAP Fiori business roles in PFCG"
+        },
+        {
+          "id": "F",
+          "text": "Correcting Software Information via a CISI Run"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C",
+        "F"
+      ],
+      "why": "The bank adds A and labels four answers; official SAP material supports B,C,F. SUM can patch kernel, run SPAM/SAINT-related updates and perform CISI correction; setting up TMS is not a SUM action."
+    },
+    {
+      "id": "C_TADM_23_Q093",
+      "question_number": 93,
+      "domain": "TADM12",
+      "question": "What are prerequisites to use the Software Update Manager to apply SAP Support Packages to an AS ABAP-based SAP system? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The SAP Host Agent must have been configured by SUM"
+        },
+        {
+          "id": "B",
+          "text": "A suitable Stack XML file must exist"
+        },
+        {
+          "id": "C",
+          "text": "The SUM archive must have been extracted"
+        },
+        {
+          "id": "D",
+          "text": "The SAP HANA backup catalog must be deleted"
+        },
+        {
+          "id": "E",
+          "text": "The Transport Management System must be disabled"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning SUM prerequisites include the Stack XML, configuring the SAP Host Agent and extracting the SUM archive."
+    },
+    {
+      "id": "C_TADM_23_Q094",
+      "question_number": 94,
+      "domain": "TADM12",
+      "question": "You are installing an SAP S/4HANA server 2021 System, using s4xhost as application server host and haxhost as database host. Which actions can Software Provisioning Manager (SWPM) perform? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set database import parameters for the database running on haxhost"
+        },
+        {
+          "id": "B",
+          "text": "Install the Central Services instance on s4xhost"
+        },
+        {
+          "id": "C",
+          "text": "Install the SAP HANA database software automatically on haxhost"
+        },
+        {
+          "id": "D",
+          "text": "Configure SAP Fiori launchpad catalogs for business users"
+        },
+        {
+          "id": "E",
+          "text": "Perform post-conversion custom code remediation"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning separates SWPM installation tasks from HANA DB software installation/configuration; SWPM can set DB import parameters and install the Central Services instance."
+    },
+    {
+      "id": "C_TADM_23_Q095",
+      "question_number": 95,
+      "domain": "TADM12",
+      "question": "You are installing an SAP S/4HANA Server 1909 system, using s4xhost as application server host and haxhost as database host. Which actions can Software Provisioning Manager (SWPM) perform? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set database import parameters for the database running on haxhost"
+        },
+        {
+          "id": "B",
+          "text": "Copy the database installation media from s4xhost to haxhost"
+        },
+        {
+          "id": "C",
+          "text": "Install the Central Services instance on s4xhost"
+        },
+        {
+          "id": "D",
+          "text": "Install the database on haxhost"
+        },
+        {
+          "id": "E",
+          "text": "Copy the database backup media from s4xhost to haxhost"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "why": "SAP Learning installation material permits setting database parameters, installing Central Services and installing the database through SWPM for the stated older S/4HANA release."
+    },
+    {
+      "id": "C_TADM_23_Q096",
+      "question_number": 96,
+      "domain": "TADM12",
+      "question": "When installing an SAP S/4HANA Server system, which actions can the Software Provisioning Manager (SWPM) perform only when the installation is started with the option SAPINST_STACK_XML? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apply a SPAM/SAINT update"
+        },
+        {
+          "id": "B",
+          "text": "Install additional languages"
+        },
+        {
+          "id": "C",
+          "text": "Set up Transport Management System (TMS)"
+        },
+        {
+          "id": "D",
+          "text": "Create SAP Fiori business catalogs"
+        },
+        {
+          "id": "E",
+          "text": "Configure SAP HANA system replication"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning SAPinst documentation states the SAPINST_STACK_XML path supports automated TMS setup and import of additional languages; the installation flow also allows the indicated SPAM/SAINT update."
+    },
+    {
+      "id": "C_TADM_23_Q097",
+      "question_number": 97,
+      "domain": "TADM12",
+      "question": "You are importing an SAP Support Package Stack with transaction SPAM. Which steps require SAP system downtime? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Modification adjustment of other objects (SPAU)"
+        },
+        {
+          "id": "B",
+          "text": "Activation of dictionary objects (DD ACTIVATION)"
+        },
+        {
+          "id": "C",
+          "text": "Import of inactive transport requests"
+        },
+        {
+          "id": "D",
+          "text": "Generation of ABAP loads"
+        },
+        {
+          "id": "E",
+          "text": "Downloading Support Package files from SAP Support Portal"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning's SPAM/update sequence identifies SPAU adjustment and DD ACTIVATION as downtime phases; DD IMPORT itself is not the downtime step."
+    },
+    {
+      "id": "C_TADM_23_Q098",
+      "question_number": 98,
+      "domain": "TADM12",
+      "question": "You are preparing an installation of an AS ABAP-based SAP system. You already downloaded all software that Maintenance Planner can calculate. What else must you download?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAPCAR"
+        },
+        {
+          "id": "B",
+          "text": "SAP Fiori launchpad content"
+        },
+        {
+          "id": "C",
+          "text": "SAP HANA backup catalog"
+        },
+        {
+          "id": "D",
+          "text": "Transport domain configuration"
+        },
+        {
+          "id": "E",
+          "text": "SAP Gateway service metadata"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning installation-preparation guidance identifies SAPCAR as an additional utility used to extract SAP archives after Maintenance Planner material has been downloaded."
+    },
+    {
+      "id": "C_TADM_23_Q099",
+      "question_number": 99,
+      "domain": "TADM12",
+      "question": "You plan to update an AS ABAP-based SAP system with the role 'Quality Assurance System'. What does SAP recommend you do before you start Software Update Manager (SUM) for this system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Import the modification adjustment transports from the update of the Development System"
+        },
+        {
+          "id": "B",
+          "text": "Follow the instructions from SAP Note 'Central Note - Software Update Manager' for the used version of SUM"
+        },
+        {
+          "id": "C",
+          "text": "Delete all released transport requests from the import queue"
+        },
+        {
+          "id": "D",
+          "text": "Perform a client copy from the Production System to the Quality Assurance System"
+        },
+        {
+          "id": "E",
+          "text": "Disable Transport Management System (TMS) before starting SUM"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning update guidance uses the modification-adjustment transports from the development update path for QA, and requires following the Central Note for the exact SUM version."
+    },
+    {
+      "id": "C_TADM_23_Q100",
+      "question_number": 100,
+      "domain": "TADM12",
+      "question": "You are updating an AS Java-based SAP system. Which actions can Software Update Manager execute? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check the archives' authenticity"
+        },
+        {
+          "id": "B",
+          "text": "Update without using a stack configuration file (Stack XML file)"
+        },
+        {
+          "id": "C",
+          "text": "Create SAP HANA tenant databases"
+        },
+        {
+          "id": "D",
+          "text": "Configure SAP Fiori business catalogs"
+        },
+        {
+          "id": "E",
+          "text": "Perform a local client copy"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning's Java SUM flow states an update can be run without a stack XML and includes authenticity checks for update archives."
+    },
+    {
+      "id": "C_TADM_23_Q101",
+      "question_number": 101,
+      "domain": "TADM12",
+      "question": "For AS ABAP-based SAP systems, you can use Software Update Manager to update which of the following? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP kernel"
+        },
+        {
+          "id": "B",
+          "text": "Software component SAP_BASIS"
+        },
+        {
+          "id": "C",
+          "text": "SAP HANA backup catalog"
+        },
+        {
+          "id": "D",
+          "text": "SAP Gateway service aliases only"
+        },
+        {
+          "id": "E",
+          "text": "User master records in client 000"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning lists kernel and SAP_BASIS as updateable AS ABAP components in SUM."
+    },
+    {
+      "id": "C_TADM_23_Q102",
+      "question_number": 102,
+      "domain": "TADM12",
+      "question": "Several components of SAP systems can be patched using Software Update Manager (SUM). Which components of AS ABAP-based SAP systems can be updated using SUM? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kernel"
+        },
+        {
+          "id": "B",
+          "text": "SPAM/SAINT"
+        },
+        {
+          "id": "C",
+          "text": "SAP_BASIS"
+        },
+        {
+          "id": "D",
+          "text": "SAP HANA backup catalog"
+        },
+        {
+          "id": "E",
+          "text": "User master records"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning explicitly lists kernel, SPAM/SAINT and SAP_BASIS among SUM-maintainable AS ABAP components."
+    },
+    {
+      "id": "C_TADM_23_Q103",
+      "question_number": 103,
+      "domain": "TADM12",
+      "question": "What should you do before updating your SAP system using SUM? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Download the latest version of SUM"
+        },
+        {
+          "id": "B",
+          "text": "Read the corresponding SAP Note for your version of SUM"
+        },
+        {
+          "id": "C",
+          "text": "Delete all transport requests from the import queue"
+        },
+        {
+          "id": "D",
+          "text": "Disable all SAP background jobs permanently"
+        },
+        {
+          "id": "E",
+          "text": "Remove the SAP Host Agent from the system"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning recommends downloading the current SUM release and reading the corresponding SAP Note before starting."
+    },
+    {
+      "id": "C_TADM_23_Q104",
+      "question_number": 104,
+      "domain": "TADM12",
+      "question": "When updating an SAP system using Software Update Manager (SUM), you can decide between which main configurations of the tool?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standard"
+        },
+        {
+          "id": "B",
+          "text": "Advanced"
+        },
+        {
+          "id": "C",
+          "text": "Minimal"
+        },
+        {
+          "id": "D",
+          "text": "Expert"
+        },
+        {
+          "id": "E",
+          "text": "Development"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning describes Standard as the standard SUM configuration; Expert Mode is an additional mode rather than a separate main configuration choice."
+    },
+    {
+      "id": "C_TADM_23_Q105",
+      "question_number": 105,
+      "domain": "TADM12",
+      "question": "When working with Software Update Manager (SUM) you can activate an Expert Mode that allows additional settings. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning explicitly describes SUM Expert Mode as enabling additional settings."
+    },
+    {
+      "id": "C_TADM_23_Q106",
+      "question_number": 106,
+      "domain": "TADM12",
+      "question": "Executing an update of an AS ABAP-based SAP system using the Software Update Manager (SUM) requires that you provide a so-called stack XML file at the beginning of the update process. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning's S/4HANA SUM procedure begins with a Stack XML for the standard update flow."
+    },
+    {
+      "id": "C_TADM_23_Q107",
+      "question_number": 107,
+      "domain": "TADM12",
+      "question": "The database migration option (DMO) is part of which tool?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Software Update Manager, SUM"
+        },
+        {
+          "id": "B",
+          "text": "Software Provisioning Manager, SWPM"
+        },
+        {
+          "id": "C",
+          "text": "SAP HANA Database Lifecycle Manager, HDBLCM"
+        },
+        {
+          "id": "D",
+          "text": "Maintenance Planner"
+        },
+        {
+          "id": "E",
+          "text": "SAPinst"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help documents DMO as a Software Update Manager function."
+    },
+    {
+      "id": "C_TADM_23_Q108",
+      "question_number": 108,
+      "domain": "TADM12",
+      "question": "You want to configure the TMS QA Approval procedure for an AS ABAP-based system landscape. Which of the following are predefined approval steps that you can choose? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To be approved by department"
+        },
+        {
+          "id": "B",
+          "text": "To be approved by request owner"
+        },
+        {
+          "id": "C",
+          "text": "To be approved by system administration"
+        },
+        {
+          "id": "D",
+          "text": "To be approved by database administrator"
+        },
+        {
+          "id": "E",
+          "text": "To be approved by end user"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning lists department and request-owner approval plus system-administration approval as predefined QA approval steps."
+    },
+    {
+      "id": "C_TADM_23_Q109",
+      "question_number": 109,
+      "domain": "TADM12",
+      "question": "You configure the Transport Management System (TMS) as part of the installation of an AS ABAP-based SAP system. What information can you supply for the first SAP system that uses a specific transport directory? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The name of the Transport Domain"
+        },
+        {
+          "id": "B",
+          "text": "The password of a new user that will be created"
+        },
+        {
+          "id": "C",
+          "text": "The description of the AS ABAP-based SAP system"
+        },
+        {
+          "id": "D",
+          "text": "The SAP HANA tenant database backup location"
+        },
+        {
+          "id": "E",
+          "text": "The number of dialog work processes for the instance"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning TMS setup material covers defining the transport domain, creating TMSADM with a password and supplying the system description for the first system using the transport directory."
+    },
+    {
+      "id": "C_TADM_23_Q110",
+      "question_number": 110,
+      "domain": "TADM12",
+      "question": "You configure the Transport Management System (TMS) in a freshly installed AS ABAP 7.5. What will be done (by the system) during the initial setup of TMS? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A password will be required"
+        },
+        {
+          "id": "B",
+          "text": "The user TMSADM will be created"
+        },
+        {
+          "id": "C",
+          "text": "The system description needs to be provided"
+        },
+        {
+          "id": "D",
+          "text": "The SAP kernel will be updated automatically"
+        },
+        {
+          "id": "E",
+          "text": "All transport requests will be imported into the system"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "TMS initial setup requires a password, creates TMSADM, and requires the system description."
+    },
+    {
+      "id": "C_TADM_23_Q111",
+      "question_number": 111,
+      "domain": "TADM12",
+      "question": "In which client is the initial setup of TMS done?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Client 000"
+        },
+        {
+          "id": "B",
+          "text": "Client 001"
+        },
+        {
+          "id": "C",
+          "text": "Client 066"
+        },
+        {
+          "id": "D",
+          "text": "Client 100"
+        },
+        {
+          "id": "E",
+          "text": "Client 800"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning TMS setup is performed in client 000."
+    },
+    {
+      "id": "C_TADM_23_Q112",
+      "question_number": 112,
+      "domain": "TADM12",
+      "question": "You want to configure the transport domain for the transport of AS Java-based SAP systems (for example SAP Enterprise Portal). Which entry type do you create for these systems in the System Overview area of the Transport Management System (transaction STMS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Virtual System"
+        },
+        {
+          "id": "B",
+          "text": "External System"
+        },
+        {
+          "id": "C",
+          "text": "Java Stack Configuration"
+        },
+        {
+          "id": "D",
+          "text": "Non-ABAP System"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "SAP Help TMS uses the Non-ABAP System entry type for non-ABAP/Java systems in the transport domain."
+    },
+    {
+      "id": "C_TADM_23_Q113",
+      "question_number": 113,
+      "domain": "TADM12",
+      "question": "You are using a Change and Transport System (CTS) for the transport of native SAP HANA applications. Which tool can you use to create a transport request for these applications in the CTS system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transport Organizer Web UI (in transaction STMS)"
+        },
+        {
+          "id": "B",
+          "text": "Transport Organizer (Extended View) (in transaction SE01)"
+        },
+        {
+          "id": "C",
+          "text": "Transport Organizer (in transaction SE09)"
+        },
+        {
+          "id": "D",
+          "text": "Database Assistant (in transaction DB50N)"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning transport-organization material identifies SE09 as the standard Transport Organizer for creating ABAP transport requests; CTS handling of native HANA objects uses this organizer path."
+    },
+    {
+      "id": "C_TADM_23_Q114",
+      "question_number": 114,
+      "domain": "TADM12",
+      "question": "You are using the enhanced Change and Transport System (CTS+) for the transport of native SAP HANA Applications. Which tool can you use to create a transport request for these applications in the CTS system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transport Organizer Web UI (in transaction STMS)"
+        },
+        {
+          "id": "B",
+          "text": "Transport Organizer (Extended View) (in transaction SE01)"
+        },
+        {
+          "id": "C",
+          "text": "Transport Organizer (in transaction SE09)"
+        },
+        {
+          "id": "D",
+          "text": "SAP HANA Cockpit"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning CTS+ material uses the Transport Organizer Web UI in STMS for the CTS+ request creation workflow."
+    },
+    {
+      "id": "C_TADM_23_Q115",
+      "question_number": 115,
+      "domain": "TADM12",
+      "question": "You have created a task list (STC01) in your development system. What can you use to make the task list available in the quality assurance system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A workbench request"
+        },
+        {
+          "id": "B",
+          "text": "A customizing request"
+        },
+        {
+          "id": "C",
+          "text": "File download and upload"
+        },
+        {
+          "id": "D",
+          "text": "An RFC-based distribution"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "SAP Learning task-list administration material supports exporting/downloading task lists and importing/uploading them in another system; the bank's file download/upload answer matches that workflow."
+    },
+    {
+      "id": "C_TADM_23_Q116",
+      "question_number": 116,
+      "domain": "TADM12",
+      "question": "You want to create your own task list for the ABAP task manager (transaction STC01). Which functions are covered by tasks shipped by SAP? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Register Notification Providers"
+        },
+        {
+          "id": "B",
+          "text": "Modify SAP gateway aliases"
+        },
+        {
+          "id": "C",
+          "text": "Set profile parameters"
+        },
+        {
+          "id": "D",
+          "text": "Create Transport Requests"
+        },
+        {
+          "id": "E",
+          "text": "Execute ABAP programs"
+        }
+      ],
+      "correct_answers": [
+        "C",
+        "D",
+        "E"
+      ],
+      "why": "SAP Learning says SAP-shipped STC01 tasks include profile-parameter checks/changes, creating transport requests and executing ABAP programs."
+    },
+    {
+      "id": "C_TADM_23_Q117",
+      "question_number": 117,
+      "domain": "TADM12",
+      "question": "You are installing an SAP S/4HANA 1809 system that should use an Enqueue Replication Server (ERS). How do you install the ERS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The installation of an ERS needs to be executed by a dedicated run of SAPinst"
+        },
+        {
+          "id": "B",
+          "text": "The ERS is installed automatically together with the Primary Application Server"
+        },
+        {
+          "id": "C",
+          "text": "The ERS is created manually in transaction SM12 after the installation"
+        },
+        {
+          "id": "D",
+          "text": "The ERS is installed as part of the SAP HANA database lifecycle manager"
+        },
+        {
+          "id": "E",
+          "text": "The ERS is configured only after the first client copy is completed"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning high-availability material treats ERS installation as a separate installation step/process."
+    },
+    {
+      "id": "C_TADM_23_Q118",
+      "question_number": 118,
+      "domain": "TADM12",
+      "question": "An ASCS is a prerequisite for an ERS. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning's ERS architecture requires the Enqueue Server/ASCS side as the primary enqueue service being replicated."
+    },
+    {
+      "id": "C_TADM_23_Q119",
+      "question_number": 119,
+      "domain": "TADM12",
+      "question": "You installed an Enqueue Replication Server (ERS) for your SAP system. It is recommended that you configure a dynamic work process of type E (Enqueue) as a fallback safeguard against a failure of the ERS. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning ERS guidance does not recommend an E work process as the fallback safeguard stated in the question; the bank's False answer is consistent with the documented architecture."
+    },
+    {
+      "id": "C_TADM_23_Q120",
+      "question_number": 120,
+      "domain": "TADM12",
+      "question": "What are the steps needed to install additional languages? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scheduling of language supplementation"
+        },
+        {
+          "id": "B",
+          "text": "Scheduling of language import"
+        },
+        {
+          "id": "C",
+          "text": "Classifying the language"
+        },
+        {
+          "id": "D",
+          "text": "Creating a new transport domain"
+        },
+        {
+          "id": "E",
+          "text": "Reinstalling the SAP kernel"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning explicitly describes classifying the language plus scheduling language import and language supplementation."
+    },
+    {
+      "id": "C_TADM_23_Q121",
+      "question_number": 121,
+      "domain": "TADM12",
+      "question": "SAP recommends that you use unique SAP system IDs (SID) throughout your SAP system landscape. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning recommends unique SIDs within the system landscape where possible."
+    },
+    {
+      "id": "C_TADM_23_Q122",
+      "question_number": 122,
+      "domain": "TADM12",
+      "question": "You are installing an AS ABAP-based SAP system. Identify the SAP System IDs that are allowed, according to the corresponding naming conventions. (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "NYC"
+        },
+        {
+          "id": "B",
+          "text": "LA6"
+        },
+        {
+          "id": "C",
+          "text": "6LA"
+        },
+        {
+          "id": "D",
+          "text": "SAP"
+        },
+        {
+          "id": "E",
+          "text": "ADD"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning specifies three-character SIDs beginning with a letter and using letters/digits, with SAP-reserved identifiers excluded; NYC and LA6 fit the allowed pattern."
+    },
+    {
+      "id": "C_TADM_23_Q123",
+      "question_number": 123,
+      "domain": "TADM12",
+      "question": "Immediately after a new installation, all ABAP programs are available as source code including their load. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning installation behavior distinguishes delivered executable loads from source availability; it does not make all ABAP source code available immediately after installation."
+    },
+    {
+      "id": "C_TADM_23_Q124",
+      "question_number": 124,
+      "domain": "TADM12",
+      "question": "When you use the parameter mode Typical for an installation procedure, this setting will determine some parameter values that can't be changed during the following installation process. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "When using the Typical installation mode in SAP tools like Software Provisioning Manager (SWPM), the installer automatically calculates and assigns default values for many parameters to speed up the process. However, you are still presented with summary screens before execution, allowing you to review and change any of these values if needed."
+    },
+    {
+      "id": "C_TADM_23_Q125",
+      "question_number": 125,
+      "domain": "TADM12",
+      "question": "On the installation dialog screens relating to the installation of an Additional Application Server for an SAP S/4HANA Server system, you are required to provide the profile directory of the SAP system. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning AAS installation flow requires the SAP system profile directory as an installation parameter."
+    },
+    {
+      "id": "C_TADM_23_Q126",
+      "question_number": 126,
+      "domain": "TADM12",
+      "question": "After installation of the PAS, no user can log on to the SAP system until a permanent license is installed. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning license material states a temporary license is available after installation, so login is possible before the permanent license is installed."
+    },
+    {
+      "id": "C_TADM_23_Q127",
+      "question_number": 127,
+      "domain": "TADM12",
+      "question": "You are installing an SAP S/4HANA Server 2021 system. During this installation you can use any kernel released for this SAP system release. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning installation/update planning selects a kernel compatible with the system release/database; not every released kernel can be used arbitrarily."
+    },
+    {
+      "id": "C_TADM_23_Q128",
+      "question_number": 128,
+      "domain": "TADM12",
+      "question": "When installing an SAP system, you can start SAPinst to install Primary Application Server, ABAP Central Services Instance and one or several Additional Application Servers in one go. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning installation procedures treat PAS/ASCS installation and Additional Application Server installation as separate installation runs."
+    },
+    {
+      "id": "C_TADM_23_Q129",
+      "question_number": 129,
+      "domain": "TADM12",
+      "question": "You are using the strategy Standard for updating an AS ABAP-based SAP system. This will result in lower required free space in the database than when using the strategy Single System. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "The Standard strategy prioritizes minimizing downtime by performing shadow system operations and object activation while the production system is still online. This requires a larger shadow database and repository, increasing the temporary space needed during the upgrade."
+    },
+    {
+      "id": "C_TADM_23_Q130",
+      "question_number": 130,
+      "domain": "TADM12",
+      "question": "You use the SAP Load Generator to generate loads in your SAP system which consists of application servers running on Linux and other Unix operating systems. To generate all selected loads for all application servers, you need to start the load generation more than once. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "C_TADM_23_Q131",
+      "question_number": 131,
+      "domain": "TADM12",
+      "question": "When updating an SAP S/4HANA server system using Software Update Manager (SUM), you will be asked for the passwords for which users? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SYSTEM in SAP HANA tenant database"
+        },
+        {
+          "id": "B",
+          "text": "DDIC in client 000"
+        },
+        {
+          "id": "C",
+          "text": "SAP* in client 100"
+        },
+        {
+          "id": "D",
+          "text": "TMSADM in client 000"
+        },
+        {
+          "id": "E",
+          "text": "SAPJSF in the Java stack"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning's S/4HANA SUM flow requests the SYSTEM password for the HANA tenant database and the DDIC password in client 000."
+    },
+    {
+      "id": "C_TADM_23_Q132",
+      "question_number": 132,
+      "domain": "TADM12",
+      "question": "For which kernel components will you potentially be asked to provide current archives during installation? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAPEXE.SAR"
+        },
+        {
+          "id": "B",
+          "text": "SAPHOSTAGENT.SAR"
+        },
+        {
+          "id": "C",
+          "text": "SAPEXEDB.SAR"
+        },
+        {
+          "id": "D",
+          "text": "SAPCAR.EXE"
+        },
+        {
+          "id": "E",
+          "text": "SAPINST.SAR"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning installation guidance identifies SAPEXE, SAPEXEDB and SAPHOSTAGENT archives as kernel/host-agent archives that can be required during installation."
+    },
+    {
+      "id": "C_TADM_23_Q133",
+      "question_number": 133,
+      "domain": "TADM12",
+      "question": "Which file records all the notifications of every installation step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sapinst_dev.log"
+        },
+        {
+          "id": "B",
+          "text": "sapinst.log"
+        },
+        {
+          "id": "C",
+          "text": "SAPCAR.log"
+        },
+        {
+          "id": "D",
+          "text": "dev_disp"
+        },
+        {
+          "id": "E",
+          "text": "trans.log"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning installation-log guidance identifies sapinst_dev.log as the detailed log recording installation-step notifications."
+    },
+    {
+      "id": "C_TADM_23_Q134",
+      "question_number": 134,
+      "domain": "TADM12",
+      "question": "Using the browser-based interface of SAPinst you can directly access important log files created during the installation process. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning says the browser-based SAPinst interface provides direct access to important installation logs."
+    },
+    {
+      "id": "C_TADM_23_Q135",
+      "question_number": 135,
+      "domain": "TADM12",
+      "question": "Before starting the installation of an SAP system, consider the following information source:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Installation Guide"
+        },
+        {
+          "id": "B",
+          "text": "SAP GUI Theme Designer"
+        },
+        {
+          "id": "C",
+          "text": "Transport Import Queue"
+        },
+        {
+          "id": "D",
+          "text": "User Master Record Report"
+        },
+        {
+          "id": "E",
+          "text": "Background Job Log"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning installation preparation starts from the applicable Installation Guide."
+    },
+    {
+      "id": "C_TADM_23_Q136",
+      "question_number": 136,
+      "domain": "TADM12",
+      "question": "Which characteristics help you to identify the exact installation guide documentation that you should use during the installation process? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Release of the SAP software to be installed"
+        },
+        {
+          "id": "B",
+          "text": "Database software that will be used"
+        },
+        {
+          "id": "C",
+          "text": "Operating system that will be used"
+        },
+        {
+          "id": "D",
+          "text": "Number of end users expected in the production system"
+        },
+        {
+          "id": "E",
+          "text": "Transport domain name configured in TMS"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning says the applicable installation guide is selected based on software release, database and operating system."
+    },
+    {
+      "id": "C_TADM_23_Q137",
+      "question_number": 137,
+      "domain": "TADM12",
+      "question": "Which of the following Windows-specific preparations are performed when installing an SAP system on a Windows operating system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check Windows file system"
+        },
+        {
+          "id": "B",
+          "text": "Prepare installation user"
+        },
+        {
+          "id": "C",
+          "text": "Configure SAP HANA tenant database backups"
+        },
+        {
+          "id": "D",
+          "text": "Create ABAP transport routes in TMS"
+        },
+        {
+          "id": "E",
+          "text": "Schedule standard background jobs"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning Windows preparation covers checking the Windows file system and preparing the installation user."
+    },
+    {
+      "id": "C_TADM_23_Q138",
+      "question_number": 138,
+      "domain": "TADM12",
+      "question": "Which condition does the user used for installing an SAP system on Windows need to fulfill?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Needs to have local administrator rights"
+        },
+        {
+          "id": "B",
+          "text": "Needs to be named SAPService<SID>"
+        },
+        {
+          "id": "C",
+          "text": "Needs to be a domain guest user only"
+        },
+        {
+          "id": "D",
+          "text": "Needs to have database administrator rights only"
+        },
+        {
+          "id": "E",
+          "text": "Needs to be created in client 000 before installation"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning Windows installation preparation requires the installation user to have local administrator rights in the stated scenario."
+    },
+    {
+      "id": "C_TADM_23_Q139",
+      "question_number": 139,
+      "domain": "TADM12",
+      "question": "Which file system paths can you find in an AS ABAP 7.5 (or higher) - based SAP system on Unix, right after a standard installation? (SID being replaced by the chosen SID) (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "/usr/sap/trans"
+        },
+        {
+          "id": "B",
+          "text": "/usr/sap/<SID>/SYS"
+        },
+        {
+          "id": "C",
+          "text": "/hana/data/<SID>"
+        },
+        {
+          "id": "D",
+          "text": "/oracle/client/<SID>"
+        },
+        {
+          "id": "E",
+          "text": "/sapmnt/trans/<SID>"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning standard Unix/SAP file-system setup includes /usr/sap/trans and the /usr/sap/<SID>/SYS link/path."
+    },
+    {
+      "id": "C_TADM_23_Q140",
+      "question_number": 140,
+      "domain": "TADM12",
+      "question": "During the installation of SAP Solution Manager ABAP, which of the following user IDs does the SAPinst suggest for SAP Solution Manager Java? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAPJSF"
+        },
+        {
+          "id": "B",
+          "text": "J2EE_ADMIN"
+        },
+        {
+          "id": "C",
+          "text": "DDIC"
+        },
+        {
+          "id": "D",
+          "text": "SAP*"
+        },
+        {
+          "id": "E",
+          "text": "SOLMAN_ADMIN"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning Solution Manager installation identifies SAPJSF and J2EE_ADMIN among the suggested Java/UME user IDs."
+    },
+    {
+      "id": "C_TADM_23_Q141",
+      "question_number": 141,
+      "domain": "TADM12",
+      "question": "When you install SAP Solution Manager Java, what information do you need to provide? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The package path to an archive for SAP JVM"
+        },
+        {
+          "id": "B",
+          "text": "The decision to use an external AS ABAP-based SAP system as UME Data Source"
+        },
+        {
+          "id": "C",
+          "text": "The SAP HANA backup catalog location"
+        },
+        {
+          "id": "D",
+          "text": "The transport domain controller hostname"
+        },
+        {
+          "id": "E",
+          "text": "The SAP Fiori launchpad content provider ID"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning Solution Manager Java installation covers providing the SAP JVM archive path and choosing whether an external AS ABAP UME data source is used."
+    },
+    {
+      "id": "C_TADM_23_Q142",
+      "question_number": 142,
+      "domain": "TADM12",
+      "question": "You are installing an SAP Solution Manager Java system. What is the minimum number of Java Server Nodes that you can set during the installation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        },
+        {
+          "id": "E",
+          "text": "0"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning's Solution Manager Java setup permits a minimum of one Java server node."
+    },
+    {
+      "id": "C_TADM_23_Q143",
+      "question_number": 143,
+      "domain": "TADM12",
+      "question": "During the installation of an SAP Solution Manager ABAP system, you are required to set the user IDs for some user management engine (UME) users stored in the ABAP system. Identify the accounts, for which you need to provide user IDs. (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Administrator User"
+        },
+        {
+          "id": "B",
+          "text": "Guest User"
+        },
+        {
+          "id": "C",
+          "text": "DDIC User"
+        },
+        {
+          "id": "D",
+          "text": "SAPJSF User"
+        },
+        {
+          "id": "E",
+          "text": "Transport Management User"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning UME setup identifies Administrator and Guest users as user IDs that must be defined for the ABAP-based Solution Manager installation."
+    },
+    {
+      "id": "C_TADM_23_Q144",
+      "question_number": 144,
+      "domain": "TADM12",
+      "question": "In which phase can you revise the parameters value during the SAP Solution Manager system installation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parameter Summary"
+        },
+        {
+          "id": "B",
+          "text": "Define Parameters"
+        },
+        {
+          "id": "C",
+          "text": "Execute Service"
+        },
+        {
+          "id": "D",
+          "text": "Prerequisite Check"
+        },
+        {
+          "id": "E",
+          "text": "Media Browser"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning SAPinst parameter handling allows revisions during the Parameter Summary phase."
+    },
+    {
+      "id": "C_TADM_23_Q145",
+      "question_number": 145,
+      "domain": "TADM12",
+      "question": "Which release of AS ABAP does the SAP Solution Manager ABAP 7.2 use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.40"
+        },
+        {
+          "id": "B",
+          "text": "7.31"
+        },
+        {
+          "id": "C",
+          "text": "7.50"
+        },
+        {
+          "id": "D",
+          "text": "7.52"
+        },
+        {
+          "id": "E",
+          "text": "7.00"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning identifies SAP Solution Manager 7.2 ABAP as based on AS ABAP 7.40."
+    },
+    {
+      "id": "C_TADM_23_Q146",
+      "question_number": 146,
+      "domain": "TADM12",
+      "question": "After installing an SAP system (not an SAP S/4HANA) you should schedule standard background jobs. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning distinguishes the standard-job setup required for non-S/4HANA AS ABAP systems after installation."
+    },
+    {
+      "id": "C_TADM_23_Q147",
+      "question_number": 147,
+      "domain": "TADM12",
+      "question": "When configuring the standard background jobs, you will use identical functions in the SAP system whether you configure the jobs on SAP S/4HANA or non-SAP S/4HANA system that is based on AS ABAP. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning documents different standard-job/task-repository handling between S/4HANA and non-S/4HANA AS ABAP systems."
+    },
+    {
+      "id": "C_TADM_23_Q148",
+      "question_number": 148,
+      "domain": "TADM12",
+      "question": "What is the purpose of a pre-production system in an AS ABAP-based four-system landscape? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To detect cross-reference errors"
+        },
+        {
+          "id": "B",
+          "text": "To implement urgent corrections"
+        },
+        {
+          "id": "C",
+          "text": "To perform daily productive business transactions"
+        },
+        {
+          "id": "D",
+          "text": "To replace the development system for customizing changes"
+        },
+        {
+          "id": "E",
+          "text": "To store the central transport directory"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning describes the PRE system as a place for cross-reference/integration testing and urgent corrections."
+    },
+    {
+      "id": "C_TADM_23_Q149",
+      "question_number": 149,
+      "domain": "HA200",
+      "question": "What is the correct sequence of the following four steps when you restart the SAP HANA Database system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aborted transactions rolled back -> Row tables loaded into memory -> Open transactions recovered -> Column tables loaded"
+        },
+        {
+          "id": "B",
+          "text": "Row tables loaded into memory -> Open transactions recovered -> Aborted transactions rolled back -> Column tables loaded"
+        },
+        {
+          "id": "C",
+          "text": "Aborted transactions rolled back -> Open transactions recovered -> Row tables loaded into memory -> Column tables loaded"
+        },
+        {
+          "id": "D",
+          "text": "Row tables loaded into memory -> Column tables loaded -> Open transactions recovered -> Aborted transactions rolled back"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": "SAP Learning HANA startup/recovery material is consistent with the bank's startup sequence: row-store load, recovery of open transactions, rollback of aborted transactions, then column-store loading."
+    },
+    {
+      "id": "C_TADM_23_Q150",
+      "question_number": 150,
+      "domain": "HA200",
+      "question": "How are save points triggered? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "By issuing a transactional commit"
+        },
+        {
+          "id": "B",
+          "text": "By a database soft shutdown"
+        },
+        {
+          "id": "C",
+          "text": "By performing a database backup"
+        },
+        {
+          "id": "D",
+          "text": "By performing a delta merge"
+        }
+      ],
+      "correct_answers": [
+        "B",
+        "C"
+      ],
+      "why": "SAP Learning explains save points are triggered by database save-point events including backup and soft shutdown."
+    },
+    {
+      "id": "C_TADM_23_Q151",
+      "question_number": 151,
+      "domain": "HA200",
+      "question": "In which situations can you resume the failed recovery of your productive SAP HANA tenant database? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "An aborted recovery of a delta data backup"
+        },
+        {
+          "id": "B",
+          "text": "An aborted recovery of a log backup"
+        },
+        {
+          "id": "C",
+          "text": "An aborted recovery of a complete data backup"
+        },
+        {
+          "id": "D",
+          "text": "An aborted recovery after the database catalog was deleted"
+        },
+        {
+          "id": "E",
+          "text": "An aborted recovery to a different tenant database name"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP HANA allows you to resume a failed recovery using the USING RESUME clause, but only after the initial complete data backup has been successfully restored. This time-saving feature applies to two specific phases: \nDelta data backups: Picking up where it left off during differential or incremental data applications.\nLog backups: Safely resuming during the replay of redo log backups via fallback checkpoints."
+    },
+    {
+      "id": "C_TADM_23_Q152",
+      "question_number": 152,
+      "domain": "HA200",
+      "question": "What is the purpose of the SAP HANA secure user store (hdbuserstore)? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "To configure failover support in a 3-tier scenario"
+        },
+        {
+          "id": "B",
+          "text": "To store connection information on the SAP HANA database client"
+        },
+        {
+          "id": "C",
+          "text": "To store SAP HANA backup files securely"
+        },
+        {
+          "id": "D",
+          "text": "To manage database user authorizations in SAP HANA Cockpit"
+        },
+        {
+          "id": "E",
+          "text": "To encrypt the SAP HANA persistence layer"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Help: hdbuserstore stores HANA connection information on the client and supports failover lists in 3-tier scenarios."
+    },
+    {
+      "id": "C_TADM_23_Q153",
+      "question_number": 153,
+      "domain": "HA200",
+      "question": "When performing a standard SAP HANA database system installation, which users will be created or validated during that installation? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "sapadm"
+        },
+        {
+          "id": "B",
+          "text": "SYSTEM"
+        },
+        {
+          "id": "C",
+          "text": "DDIC"
+        },
+        {
+          "id": "D",
+          "text": "SAPJSF"
+        },
+        {
+          "id": "E",
+          "text": "SAPService<SID>"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning installation material states sapadm is created/validated for host administration and SYSTEM is created/validated in the database."
+    },
+    {
+      "id": "C_TADM_23_Q154",
+      "question_number": 154,
+      "domain": "HA200",
+      "question": "Which services can you stop in the SAP HANA cockpit from the SYSTEMDB Manage Services app? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pre-processor"
+        },
+        {
+          "id": "B",
+          "text": "Compile Server"
+        },
+        {
+          "id": "C",
+          "text": "Index Server"
+        },
+        {
+          "id": "D",
+          "text": "Name Server"
+        },
+        {
+          "id": "E",
+          "text": "SAP Host Agent"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning material shows Preprocessor and Compile Server can be stopped from SYSTEMDB Manage Services; newer material also shows other services (for example Name Server) can be stopped in some scenarios. The fixed '(2)' answer is therefore version-dependent."
+    },
+    {
+      "id": "C_TADM_23_Q155",
+      "question_number": 155,
+      "domain": "HA200",
+      "question": "You are running an SAP HANA database in log mode 'normal'. Under what circumstances does the database automatically execute a regular log backup? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the log segment is full"
+        },
+        {
+          "id": "B",
+          "text": "When the time threshold is exceeded"
+        },
+        {
+          "id": "C",
+          "text": "When a complete data backup is started"
+        },
+        {
+          "id": "D",
+          "text": "When the SAP HANA system is restarted"
+        },
+        {
+          "id": "E",
+          "text": "When the backup catalog is manually deleted"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning states automatic log backup is triggered when the log segment is full or the configured time threshold is reached."
+    },
+    {
+      "id": "C_TADM_23_Q156",
+      "question_number": 156,
+      "domain": "HA200",
+      "question": "What action(s) can you perform in the SAP HANA cockpit to back up the complete database system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Back up the system database and all tenant databases individually"
+        },
+        {
+          "id": "B",
+          "text": "Back up only the SYSTEMDB because it automatically includes all tenant databases"
+        },
+        {
+          "id": "C",
+          "text": "Back up only one tenant database because it contains the complete database system"
+        },
+        {
+          "id": "D",
+          "text": "Export the backup catalog from SAP HANA cockpit"
+        },
+        {
+          "id": "E",
+          "text": "Back up the SAP HANA installation directory only"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning distinguishes system-database and tenant-database backup/recovery scopes; a complete MDC landscape backup requires handling the system database and tenant databases rather than treating SYSTEMDB alone as the whole productive data set."
+    },
+    {
+      "id": "C_TADM_23_Q157",
+      "question_number": 157,
+      "domain": "HA200",
+      "question": "Which parameters are mandatory when using the HDBLCM tool to install the SAP HANA database system in batch mode? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Password of the user sapadm"
+        },
+        {
+          "id": "B",
+          "text": "Instance number of the SAP HANA system"
+        },
+        {
+          "id": "C",
+          "text": "SAP HANA System ID, SID"
+        },
+        {
+          "id": "D",
+          "text": "Name of the backup catalog"
+        },
+        {
+          "id": "E",
+          "text": "Password of the SYSTEM user only after installation"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "C"
+      ],
+      "why": "SAP Learning HDBLCM batch-installation material requires host-user and system-identification parameters; the bank's mandatory pair is consistent with the batch installation flow."
+    },
+    {
+      "id": "C_TADM_23_Q158",
+      "question_number": 158,
+      "domain": "HA200",
+      "question": "Which file systems are supported for the data and log volumes of the SAP HANA 2.0 database system? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "GPFS"
+        },
+        {
+          "id": "B",
+          "text": "XFS"
+        },
+        {
+          "id": "C",
+          "text": "FAT32"
+        },
+        {
+          "id": "D",
+          "text": "NTFS"
+        },
+        {
+          "id": "E",
+          "text": "HFS+"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning HANA storage material recognizes XFS and GPFS among supported enterprise file-system options for HANA data/log storage."
+    },
+    {
+      "id": "C_TADM_23_Q159",
+      "question_number": 159,
+      "domain": "HA200",
+      "question": "Which characteristics describe an SAP HANA multitenant database container (MDC) system? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "The name server provides index server functionality for the system database"
+        },
+        {
+          "id": "B",
+          "text": "Database isolation increases the isolation between tenant databases on operating system level"
+        },
+        {
+          "id": "C",
+          "text": "A multitenant database container system is identified by a single system ID, SID"
+        },
+        {
+          "id": "D",
+          "text": "Each tenant database must have its own separate SAP HANA SID"
+        },
+        {
+          "id": "E",
+          "text": "The system database stores application data for productive SAP applications"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP Help: only the system database runs the name server, which provides index-server functionality for the system database; the MDC system uses a single SID and isolates tenant databases."
+    },
+    {
+      "id": "C_TADM_23_Q160",
+      "question_number": 160,
+      "domain": "HA200",
+      "question": "How does SAP HANA encrypt the data persistence layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By page level"
+        },
+        {
+          "id": "B",
+          "text": "By table level"
+        },
+        {
+          "id": "C",
+          "text": "By column level"
+        },
+        {
+          "id": "D",
+          "text": "By row level"
+        },
+        {
+          "id": "E",
+          "text": "By schema level"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning states HANA persistence/data-volume encryption is performed at page level."
+    },
+    {
+      "id": "C_TADM_23_Q161",
+      "question_number": 161,
+      "domain": "HA200",
+      "question": "Which file system location do you need to specify when installing the SAP HANA multi-host database system using the default settings? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "/hana/shared"
+        },
+        {
+          "id": "B",
+          "text": "/hana/log/<SID>"
+        },
+        {
+          "id": "C",
+          "text": "/usr/sap/trans"
+        },
+        {
+          "id": "D",
+          "text": "/sapmnt/<SID>"
+        },
+        {
+          "id": "E",
+          "text": "/hana/backup"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning multi-host installation material uses /hana/shared for shared software and /hana/log/<SID> for log storage."
+    },
+    {
+      "id": "C_TADM_23_Q162",
+      "question_number": 162,
+      "domain": "HA200",
+      "question": "For an SAP HANA tailored data center integration (TDI) approach, what is the additional disk space factor required during delta merge operations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.2"
+        },
+        {
+          "id": "B",
+          "text": "1.0"
+        },
+        {
+          "id": "C",
+          "text": "1.5"
+        },
+        {
+          "id": "D",
+          "text": "2.0"
+        },
+        {
+          "id": "E",
+          "text": "0.5"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "C_TADM_23_Q163",
+      "question_number": 163,
+      "domain": "HA200",
+      "question": "How can the system database administrator disable tenant database functionalities? (3)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using the Manage Database Configuration application"
+        },
+        {
+          "id": "B",
+          "text": "Using the resident hdblcm tool"
+        },
+        {
+          "id": "C",
+          "text": "Using the Manage Restricted Features app in SAP HANA Cockpit"
+        },
+        {
+          "id": "D",
+          "text": "Using transaction DBACOCKPIT in the ABAP system"
+        },
+        {
+          "id": "E",
+          "text": "Using SAP HANA Studio to delete the SYSTEMDB"
+        },
+        {
+          "id": "F",
+          "text": "Using the SAP Web Dispatcher administration console"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "SAP HANA provides a mechanism for the system database administrator to restrict functionality that is available to a tenant database. The restriction is configured through the documented tenant-database restricted-features mechanism rather than by treating the resident HDBLCM process as the corresponding control mechanism."
+    },
+    {
+      "id": "C_TADM_23_Q164",
+      "question_number": 164,
+      "domain": "HA200",
+      "question": "Which tasks can you perform when using the SAP HANA database lifecycle manager (HDBLCM) from the SAP HANA installation media? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extract the SAP HANA database system components"
+        },
+        {
+          "id": "B",
+          "text": "Update the SAP HANA database system and its components"
+        },
+        {
+          "id": "C",
+          "text": "Configure SAP Fiori launchpad catalogs"
+        },
+        {
+          "id": "D",
+          "text": "Create ABAP transport requests"
+        },
+        {
+          "id": "E",
+          "text": "Perform SAP S/4HANA conversion checks"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning HDBLCM material describes extracting/initializing HANA components from installation media and updating HANA components through lifecycle management."
+    },
+    {
+      "id": "C_TADM_23_Q165",
+      "question_number": 165,
+      "domain": "HA200",
+      "question": "Which SAP HANA lifecycle management tools can be used to install the SAP HANA database system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "hdblcm"
+        },
+        {
+          "id": "B",
+          "text": "hdbsql"
+        },
+        {
+          "id": "C",
+          "text": "hdbuserstore"
+        },
+        {
+          "id": "D",
+          "text": "HANA Cockpit"
+        },
+        {
+          "id": "E",
+          "text": "SAPinst"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning identifies hdblcm as the command-line lifecycle-management installer for SAP HANA."
+    },
+    {
+      "id": "C_TADM_23_Q166",
+      "question_number": 166,
+      "domain": "HA200",
+      "question": "From which Web site can you securely download the full SAP HANA documentation as a .zip file?",
+      "options": [
+        {
+          "id": "A",
+          "text": "https://help.sap.com/docs/SAP_HANA_PLATFORM"
+        },
+        {
+          "id": "B",
+          "text": "https://support.sap.com/swdc"
+        },
+        {
+          "id": "C",
+          "text": "https://launchpad.support.sap.com"
+        },
+        {
+          "id": "D",
+          "text": "https://www.sap.com/products/technology-platform/hana.html"
+        },
+        {
+          "id": "E",
+          "text": "https://me.sap.com"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "The question's stated source is the SAP HANA Platform documentation space on help.sap.com, where SAP publishes HANA documentation and downloadable documentation packages."
+    },
+    {
+      "id": "C_TADM_23_Q167",
+      "question_number": 167,
+      "domain": "HA200",
+      "question": "What software innovations did SAP deliver with SAP HANA? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Partitioning"
+        },
+        {
+          "id": "B",
+          "text": "Column and delta store"
+        },
+        {
+          "id": "C",
+          "text": "Row-only database storage"
+        },
+        {
+          "id": "D",
+          "text": "File-based transport directory"
+        },
+        {
+          "id": "E",
+          "text": "Client-dependent customizing tables"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning HANA architecture describes partitioning and the column store/delta store design."
+    },
+    {
+      "id": "C_TADM_23_Q168",
+      "question_number": 168,
+      "domain": "HA200",
+      "question": "Which inter-service communication property binds the processes to the entered address only, and to all local host interfaces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Internal"
+        },
+        {
+          "id": "B",
+          "text": "Global"
+        },
+        {
+          "id": "C",
+          "text": "Public"
+        },
+        {
+          "id": "D",
+          "text": "Localhost"
+        },
+        {
+          "id": "E",
+          "text": "External"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Help explicitly defines the internal inter-service communication option as binding processes to the entered internal address and all local host interfaces."
+    },
+    {
+      "id": "C_TADM_23_Q169",
+      "question_number": 169,
+      "domain": "HA200",
+      "question": "For which system landscape types can you use the SAP HANA Hardware and Cloud Measurement tools to determine if your hardware meets the minimum performance criteria required to run SAP HANA in production use? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single-host setup"
+        },
+        {
+          "id": "B",
+          "text": "A scale-out setup"
+        },
+        {
+          "id": "C",
+          "text": "A client-only installation"
+        },
+        {
+          "id": "D",
+          "text": "A standby-only host setup without database services"
+        },
+        {
+          "id": "E",
+          "text": "An SAP Web Dispatcher-only setup"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning hardware measurement material explicitly covers single-host and scale-out HANA systems."
+    },
+    {
+      "id": "C_TADM_23_Q170",
+      "question_number": 170,
+      "domain": "HA200",
+      "question": "SAP HANA tailored data center integration (TDI) is an open and flexible approach for the integration of SAP HANA in the data center. TDI can reduce hardware and operation costs by reusing existing hardware components and processes. (True/False)",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning describes TDI as an open/flexible HANA integration approach designed to reuse existing infrastructure and processes and reduce cost."
+    },
+    {
+      "id": "C_TADM_23_Q171",
+      "question_number": 171,
+      "domain": "HA200",
+      "question": "What is the minimum space requirement for the Data Volume? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.2 x RAM for TDI"
+        },
+        {
+          "id": "B",
+          "text": "3 x RAM for Appliance"
+        },
+        {
+          "id": "C",
+          "text": "1 x RAM for TDI"
+        },
+        {
+          "id": "D",
+          "text": "2 x RAM for Appliance"
+        },
+        {
+          "id": "E",
+          "text": "5 x RAM for TDI"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "C_TADM_23_Q172",
+      "question_number": 172,
+      "domain": "HA200",
+      "question": "Which certified hardware components are listed on the SAP HANA hardware directory? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enterprise storage systems"
+        },
+        {
+          "id": "B",
+          "text": "Appliances"
+        },
+        {
+          "id": "C",
+          "text": "SAP GUI front-end clients"
+        },
+        {
+          "id": "D",
+          "text": "ABAP application servers"
+        },
+        {
+          "id": "E",
+          "text": "SAP Web Dispatcher instances"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning's supported-hardware material covers certified enterprise storage systems and appliance configurations in the SAP HANA hardware directory."
+    },
+    {
+      "id": "C_TADM_23_Q173",
+      "question_number": 173,
+      "domain": "HA200",
+      "question": "Which components of an SAP HANA appliance do you need to consider for sizing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Memory"
+        },
+        {
+          "id": "B",
+          "text": "SAP GUI patch level"
+        },
+        {
+          "id": "C",
+          "text": "Transport directory size"
+        },
+        {
+          "id": "D",
+          "text": "Number of ABAP clients"
+        },
+        {
+          "id": "E",
+          "text": "SAP Web Dispatcher profile size"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning HANA sizing material identifies memory as the primary appliance sizing dimension."
+    },
+    {
+      "id": "C_TADM_23_Q174",
+      "question_number": 174,
+      "domain": "HA200",
+      "question": "When the database is running in a mode where it does not write any change logs, data can be restored to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The last full backup"
+        },
+        {
+          "id": "B",
+          "text": "The last committed transaction"
+        },
+        {
+          "id": "C",
+          "text": "The most recent log backup"
+        },
+        {
+          "id": "D",
+          "text": "Any point in time before the failure"
+        },
+        {
+          "id": "E",
+          "text": "The last delta backup plus all log backups"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "SAP Learning backup/recovery material states that in no-log/overwrite operation recovery is limited to the last usable full/data backup rather than point-in-time log recovery."
+    },
+    {
+      "id": "C_TADM_23_Q175",
+      "question_number": 175,
+      "domain": "Mixed",
+      "question": "Which app types need SAP HANA as system database? (2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analytical apps"
+        },
+        {
+          "id": "B",
+          "text": "Factsheet apps"
+        },
+        {
+          "id": "C",
+          "text": "Transactional apps"
+        },
+        {
+          "id": "D",
+          "text": "Classic Dynpro applications"
+        },
+        {
+          "id": "E",
+          "text": "SAP GUI transactions"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "SAP Learning Fiori/S/4HANA architecture material identifies analytical and fact-sheet app scenarios as HANA-dependent application types in the stated legacy exam framing."
+    }
+  ]
+}
