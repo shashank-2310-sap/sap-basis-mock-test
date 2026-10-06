@@ -23,7 +23,7 @@ function buildSet(id: string, name: string, raw: unknown, expectedCount: number)
 }
 
 export const SETS: QuestionSet[] = [
-  buildSet('basis-imp', 'SAP Basis Imp Questions', rawBasisImp, 175),
+  buildSet('basis-imp', 'SAP Basis Imp Questions', rawBasisImp, 181),
   buildSet('unit-end', 'Unit End Questions', rawUnitEnd, 275),
 ]
 

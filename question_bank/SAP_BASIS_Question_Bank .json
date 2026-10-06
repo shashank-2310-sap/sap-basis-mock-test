@@ -1630,7 +1630,7 @@
       "correct_answers": [
         "A"
       ],
-      "why": "SAP Learning states Communications Data users are dialog-free while password validity rules still apply."
+      "why": "Dialog User: This user type is tailored for online access, suitable for RFC and background jobs. It's typically chosen when creating a user ID for an actual person.\nSystem User: System users are designed for background jobs and RFC, excluding dialog logons (SAP GUI). They lack the capability to change their own passwords, requiring intervention from a user administrator. This user type is primarily intended for internal processes such as Transport Management System (TMS), Central User Administration (CUA), or Application Link Enabling (ALE). \nCommunication User: Similar to system users (No Dialog Login), communication users serve background jobs and RFC. One important & unique point about communication users is, they can change their passwords themselves needing no manual intervention. \nService User: Service users are dialog users aimed at accommodating a broader, anonymous user base, particularly useful when accessing the system anonymously via a web application. \nReference User: Reference users function as templates for creating operational users with identical authorizations. Primarily encountered in the realm of internet users generated through Transaction SU01, a reference user lacks the ability to log on in any manner and cannot be utilized in background jobs."
     },
     {
       "id": "C_TADM_23_Q054",
@@ -2438,7 +2438,7 @@
       "id": "C_TADM_23_Q081",
       "question_number": 81,
       "domain": "TADM12",
-      "question": "When importing a transport request, which steps are executed by a batch job? (3)",
+      "question": "When importing a transport request, which steps are executed by a batch job? (4)",
       "options": [
         {
           "id": "A",
@@ -2467,10 +2467,11 @@
       ],
       "correct_answers": [
         "A",
+        "B",
         "C",
         "D"
       ],
-      "why": "Activation & Distribution of dictionary objects, and Move nametabs are executed by batch jobs. These ABAP Dictionary steps are performed inside the SAP system using the background dispatcher job RDDIMPDP."
+      "why": "Activation, Import & Distribution of dictionary objects, and Move nametabs are executed by batch jobs. These ABAP Dictionary steps are performed inside the SAP system using the background dispatcher job RDDIMPDP."
     },
     {
       "id": "C_TADM_23_Q082",
@@ -5312,6 +5313,183 @@
         "B"
       ],
       "why": "SAP Learning Fiori/S/4HANA architecture material identifies analytical and fact-sheet app scenarios as HANA-dependent application types in the stated legacy exam framing."
+    },
+    {
+      "id": "C_TADM_23_Q176",
+      "question_number": 176,
+      "domain": "HA200",
+      "question": "Which tasks can you perform when using the Resident SAP HANA database lifecycle manager (HDBLCM)? Note: There are 3 correct answers to this question.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rename the SAP HANA database system."
+        },
+        {
+          "id": "B",
+          "text": "Extract the SAP HANA database system components."
+        },
+        {
+          "id": "C",
+          "text": "Uninstall the SAP HANA database system and its components."
+        },
+        {
+          "id": "D",
+          "text": "Update the SAP HANA database system and its components."
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "why": "The resident HDBLCM runs on the host where SAP HANA is already installed and manages the existing system: it can rename it, update it, and uninstall it (along with its components). Extracting the database system components is a job of the installation-media HDBLCM (used for install/upgrade), not the resident one."
+    },
+    {
+      "id": "C_TADM_23_Q177",
+      "question_number": 177,
+      "domain": "TADM10",
+      "question": "You are configuring outbound e-mails for an AS ABAP-based SAP system. What can you use to set the default domain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Report RSADRCK7"
+        },
+        {
+          "id": "B",
+          "text": "Profile parameter is /SMTP/virt_host_<X>"
+        },
+        {
+          "id": "C",
+          "text": "Transaction SCOT"
+        },
+        {
+          "id": "D",
+          "text": "File DOMAIN.CFG"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": "The default domain for outbound e-mail is maintained in transaction SCOT (Business Communication Administration -> Settings -> SMTP connection -> Outbound Settings -> Default Domain). The report, profile parameter, and file listed are not used to set it."
+    },
+    {
+      "id": "C_TADM_23_Q178",
+      "question_number": 178,
+      "domain": "TADM10",
+      "question": "Using the Java Startup and Control Framework, what is the correct sequence of steps to start an application server of an AS Java-based SAP system?\n1. Start Offline Deployment\n2. Start bootstrap process\n3. Start ICM/Server process(es)\n4. Connect to SCS instance",
+      "options": [
+        {
+          "id": "A",
+          "text": "4, 1, 2, 3"
+        },
+        {
+          "id": "B",
+          "text": "1, 3, 4, 2"
+        },
+        {
+          "id": "C",
+          "text": "2, 4, 1, 3"
+        },
+        {
+          "id": "D",
+          "text": "4, 1, 3, 2"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": "The Instance Controller first connects to the Central Services (SCS) instance, then runs offline deployment, then the bootstrap process (which synchronizes binaries and configuration from the database to the file system), and finally starts the ICM/server processes. That gives the order 4, 1, 2, 3."
+    },
+    {
+      "id": "C_TADM_23_Q179",
+      "question_number": 179,
+      "domain": "TADM10",
+      "question": "Which tools can you use to start an SAP system? Note: There are 2 correct answers to this question.",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP Management Console (SAP MC)."
+        },
+        {
+          "id": "B",
+          "text": "SAPControl."
+        },
+        {
+          "id": "C",
+          "text": "The Microsoft Service Manager."
+        },
+        {
+          "id": "D",
+          "text": "The Internet Communication Manager (ICM)."
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B"
+      ],
+      "why": "An SAP system is started and stopped through the SAP Start Service (sapstartsrv). The SAP Management Console (SAP MC, a GUI) and SAPControl (a command-line tool used for scripting/automation) both drive that service. The Microsoft Service Manager and the ICM are not tools for starting an SAP system."
+    },
+    {
+      "id": "C_TADM_23_Q180",
+      "question_number": 180,
+      "domain": "HA200",
+      "question": "Which service is located in each tenant database of an SAP HANA system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pre-processor server"
+        },
+        {
+          "id": "B",
+          "text": "Name server"
+        },
+        {
+          "id": "C",
+          "text": "Compile server"
+        },
+        {
+          "id": "D",
+          "text": "Index Server"
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "why": "The index server is the core service present in every tenant database: it processes SQL/MDX statements and manages the actual data. The name server, compile server, and pre-processor server run on the system database (SYSTEMDB) and are shared across tenants, so they are not located in each tenant."
+    },
+    {
+      "id": "C_TADM_23_Q181",
+      "question_number": 181,
+      "domain": "HA200",
+      "question": "What does SAP recommend you size before you install SAP HANA in a tailored data center integration (TDI). Note: There are three correct answers to this question.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Main Memory"
+        },
+        {
+          "id": "B",
+          "text": "Persistent Storage"
+        },
+        {
+          "id": "C",
+          "text": "IOPS"
+        },
+        {
+          "id": "D",
+          "text": "Network Throughput"
+        },
+        {
+          "id": "E",
+          "text": "SAP Application Performance Standard (SAPS)"
+        }
+      ],
+      "correct_answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "why": "For a HANA tailored data center integration deployment SAP recommends sizing main memory (HANA is an in-memory database), persistent storage (data and log volumes, needed for durability and recovery), and IOPS (the storage must meet HANA's I/O performance KPIs). Network throughput and SAPS are not part of this TDI sizing recommendation."
     }
   ]
 }

@@ -8,3 +8,5 @@ dist-ssr
 
 # Local-only PDF generator for the Unit End question bank
 scripts/make-unit-end-pdf.cjs
+# Local-only one-off bank sync/append helper
+scripts/sync-and-add.cjs
