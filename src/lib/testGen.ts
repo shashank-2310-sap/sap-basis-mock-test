@@ -3,7 +3,19 @@ import { shuffle } from './shuffle'
 
 export const TEST_SIZE = 80
 export const TEST_DURATION_SEC = 3600
-export const PASS_SCORE = 60 // 75% of 80
+export const PASS_PERCENT = 0.75
+export const PASS_SCORE = 60 // 75% of 80 (nominal full-size test)
+
+/** Effective number of questions in a test for a given pool: capped at TEST_SIZE,
+ *  but a smaller set uses its whole pool (e.g. a 75-question set tests all 75). */
+export function testSizeFor(poolLength: number): number {
+  return Math.min(TEST_SIZE, poolLength)
+}
+
+/** Minimum score needed to pass a test of `size` questions (>= 75%). */
+export function passScoreFor(size: number): number {
+  return Math.ceil(size * PASS_PERCENT)
+}
 
 function buildOne(q: Question): BuiltQuestion {
   return { question: q, optionOrder: shuffle(q.options.map((o) => o.id)) }

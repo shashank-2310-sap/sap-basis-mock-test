@@ -6,5 +6,4 @@ dist-ssr
 .vite
 .vercel
 
-# Local-only PDF generator for the Unit End question bank
-scripts/make-unit-end-pdf.cjs
+scripts/

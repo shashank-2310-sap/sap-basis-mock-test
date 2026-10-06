@@ -1,0 +1,2104 @@
+{
+  "questions": [
+    {
+      "id": "EXTRA_Q001",
+      "question_number": 1,
+      "domain": "HA200",
+      "question": "In XS Advanced (XSA), which runtime executes JavaScript application logic originally developed for XS classic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dedicated JVM managed by Index Server"
+        },
+        {
+          "id": "B",
+          "text": "Compatibility framework within Node.js runtime"
+        },
+        {
+          "id": "C",
+          "text": "Embedded C++ Web Dispatcher plugin"
+        },
+        {
+          "id": "D",
+          "text": "ABAP Native Cloud Foundry container runtime"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q002",
+      "question_number": 2,
+      "domain": "HA200",
+      "question": "In SAP HANA TDI network segmentation, which zone is dedicated to inter-node communication and System Replication (HSR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Client Zone"
+        },
+        {
+          "id": "B",
+          "text": "Internal Zone"
+        },
+        {
+          "id": "C",
+          "text": "Storage Zone"
+        },
+        {
+          "id": "D",
+          "text": "Admin Zone"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q003",
+      "question_number": 3,
+      "domain": "HA200",
+      "question": "During hdblcm installation, where are active log files written and where is a copy archived upon completion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Written to /usr/sap/<SID>/HDB/trace/hdblcm.log; archived in /hana/shared"
+        },
+        {
+          "id": "B",
+          "text": "Written to /var/tmp/hdblcm.log; archived in /var/tmp/hdb_<SID>_hdblcm_<timestamp>"
+        },
+        {
+          "id": "C",
+          "text": "Written to database table _SYS_STATISTICS.HDBLCM_LOGS"
+        },
+        {
+          "id": "D",
+          "text": "Stored in /var/lib/hdb/"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q004",
+      "question_number": 4,
+      "domain": "HA200",
+      "question": "Which Cockpit role allows an administrator to view XS Advanced (XSA) diagnostic logs in Cockpit Manager?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cockpit Database Administrator Role"
+        },
+        {
+          "id": "B",
+          "text": "Cockpit User Administrator Role"
+        },
+        {
+          "id": "C",
+          "text": "Cockpit Troubleshooting Role (along with XSA Space Auditor role)"
+        },
+        {
+          "id": "D",
+          "text": "Cockpit Administrator Role"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q005",
+      "question_number": 5,
+      "domain": "HA200",
+      "question": "When global_allocation_limit is set to 0 (default), how is maximum memory calculated in SAP HANA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100% of physical RAM plus swap space"
+        },
+        {
+          "id": "B",
+          "text": "90% of first 64 GB physical memory + 97% of each additional GB"
+        },
+        {
+          "id": "C",
+          "text": "Fixed 80% of total physical RAM"
+        },
+        {
+          "id": "D",
+          "text": "Locked at 24 TB"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q006",
+      "question_number": 6,
+      "domain": "HA200",
+      "question": "On Linux, which default directory contains the hdbuserstore utility for SAP HANA client?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/usr/sap/hdbclient"
+        },
+        {
+          "id": "B",
+          "text": "/hana/shared/<SID>/global/hdb/custom/config"
+        },
+        {
+          "id": "C",
+          "text": "/var/lib/hdb/hdbuserstore"
+        },
+        {
+          "id": "D",
+          "text": "/etc/init.d/hdbuserstore"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q007",
+      "question_number": 7,
+      "domain": "HA200",
+      "question": "What is a key memory management characteristic when loading/unloading column store tables vs. delta storage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Column store tables must be loaded completely into DRAM in one block"
+        },
+        {
+          "id": "B",
+          "text": "Column store tables can be partially loaded column-by-column, whereas delta storage cannot"
+        },
+        {
+          "id": "C",
+          "text": "Unloading a table deletes underlying persistent data files"
+        },
+        {
+          "id": "D",
+          "text": "LOAD TABLE acquires an exclusive write lock on database catalog"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q008",
+      "question_number": 8,
+      "domain": "HA200",
+      "question": "In SAP HANA MDC architecture, which core service runs exclusively in SYSTEMDB and holds topology info for tenant databases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "indexserver"
+        },
+        {
+          "id": "B",
+          "text": "nameserver"
+        },
+        {
+          "id": "C",
+          "text": "compileserver"
+        },
+        {
+          "id": "D",
+          "text": "dpeserver"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q009",
+      "question_number": 9,
+      "domain": "HA200",
+      "question": "Why can Linux Resident Memory be larger than SAP HANA Used Memory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OS memory leaks accumulate in compileserver process"
+        },
+        {
+          "id": "B",
+          "text": "Freed memory from temporary computations is recycled into SAP HANA memory pool without returning immediately to Linux OS"
+        },
+        {
+          "id": "C",
+          "text": "Row store tables are stored uncompressed in swap space"
+        },
+        {
+          "id": "D",
+          "text": "global_allocation_limit forces double physical DRAM allocation"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q010",
+      "question_number": 10,
+      "domain": "HA200",
+      "question": "During SAP HANA startup, in what order are row store and column store tables reloaded into main memory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Column store tables load first; row store tables reload asynchronously afterwards"
+        },
+        {
+          "id": "B",
+          "text": "Row store tables load completely before database open; column store preload tables load asynchronously in background"
+        },
+        {
+          "id": "C",
+          "text": "Both load simultaneously in parallel using all CPU threads"
+        },
+        {
+          "id": "D",
+          "text": "Row store tables stay on persistent storage until active query request"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q011",
+      "question_number": 11,
+      "domain": "HA200",
+      "question": "During a Column Store Delta Merge, how are concurrent read and write transactions handled?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Read and write transactions are both blocked until merge completes"
+        },
+        {
+          "id": "B",
+          "text": "Write operations go to Delta 2; read operations query Main 1, Delta 1, and Delta 2"
+        },
+        {
+          "id": "C",
+          "text": "Write operations directly update compressed Main 1 structure"
+        },
+        {
+          "id": "D",
+          "text": "Read operations are redirected to fallback snapshot"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q012",
+      "question_number": 12,
+      "domain": "HA200",
+      "question": "What operational restriction applies to Fallback Snapshots in SAP HANA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fallback snapshots can only be created for SYSTEMDB"
+        },
+        {
+          "id": "B",
+          "text": "Only one fallback snapshot can exist per tenant database at any given time"
+        },
+        {
+          "id": "C",
+          "text": "Fallback snapshots automatically include all customer .ini configuration files"
+        },
+        {
+          "id": "D",
+          "text": "Creating a fallback snapshot requires shutting down tenant database"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q013",
+      "question_number": 13,
+      "domain": "HA200",
+      "question": "In a homogeneous database copy from M hosts to N hosts (M < N), how are the additional N - M target hosts handled during recovery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recovery fails immediately due to host count mismatch"
+        },
+        {
+          "id": "B",
+          "text": "Backup payload is recovered to M hosts, leaving additional N - M hosts unused until post-recovery redistribution"
+        },
+        {
+          "id": "C",
+          "text": "Recovery automatically splits table partitions across all N target hosts"
+        },
+        {
+          "id": "D",
+          "text": "Target system converts additional N - M hosts into standby hosts"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q014",
+      "question_number": 14,
+      "domain": "HA200",
+      "question": "Which OS user account runs the Local Secure Store (LSS) on an SAP HANA server host?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<sid>adm"
+        },
+        {
+          "id": "B",
+          "text": "sapadm"
+        },
+        {
+          "id": "C",
+          "text": "crypt"
+        },
+        {
+          "id": "D",
+          "text": "SYSTEM"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q015",
+      "question_number": 15,
+      "domain": "HA200",
+      "question": "What is a defining security characteristic of a Restricted User account in SAP HANA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Receives PUBLIC role and full SQL Console access automatically"
+        },
+        {
+          "id": "B",
+          "text": "Can create database objects in their own schema by default"
+        },
+        {
+          "id": "C",
+          "text": "Initially has no privileges or SQL access; restricted to HTTP/HTTPS application access"
+        },
+        {
+          "id": "D",
+          "text": "Passwords never expire and bypass password policy rules"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q016",
+      "question_number": 16,
+      "domain": "TADM10",
+      "question": "In SAP S/4HANA digital core, how are secondary information (aggregates, KPIs) handled during goods movements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pre-calculated and saved in dedicated aggregate tables during night batch"
+        },
+        {
+          "id": "B",
+          "text": "Determined on the fly from primary posting lines, avoiding database locks"
+        },
+        {
+          "id": "C",
+          "text": "Written synchronously to row-based lock tables in shared memory"
+        },
+        {
+          "id": "D",
+          "text": "Updated via background spool processes managed by SAP Web Dispatcher"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q017",
+      "question_number": 17,
+      "domain": "TADM10",
+      "question": "What is the default OS file system directory path structure for the Primary Application Server (PAS) of an AS ABAP system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/usr/sap/<SID>/SYS/exe/run"
+        },
+        {
+          "id": "B",
+          "text": "/usr/sap/<SID>/D<instance_number>"
+        },
+        {
+          "id": "C",
+          "text": "/usr/sap/<SID>/SCS<instance_number>"
+        },
+        {
+          "id": "D",
+          "text": "/var/sap/<SID>/PAS<instance_number>"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q018",
+      "question_number": 18,
+      "domain": "TADM10",
+      "question": "In an AS ABAP system, which ABAP Dictionary table stores transaction codes and their technical attributes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "USR02"
+        },
+        {
+          "id": "B",
+          "text": "TADIR"
+        },
+        {
+          "id": "C",
+          "text": "TSTC"
+        },
+        {
+          "id": "D",
+          "text": "USERS_SSM"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q019",
+      "question_number": 19,
+      "domain": "TADM10",
+      "question": "During ABAP transaction execution, at which operational moment does work process multiplexing occur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When user logs on to SAP GUI client instance"
+        },
+        {
+          "id": "B",
+          "text": "At the boundary of each individual dialog step (context roll-in / roll-out)"
+        },
+        {
+          "id": "C",
+          "text": "When background batch job queue in SM37 is cleared"
+        },
+        {
+          "id": "D",
+          "text": "When database interface executes explicit COMMIT WORK"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q020",
+      "question_number": 20,
+      "domain": "TADM10",
+      "question": "In AS ABAP, which work process wait priority setting accepts incoming requests across all priority levels (high, normal, low)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High Priority"
+        },
+        {
+          "id": "B",
+          "text": "Medium Priority"
+        },
+        {
+          "id": "C",
+          "text": "Low Priority"
+        },
+        {
+          "id": "D",
+          "text": "Exclusive Priority"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q021",
+      "question_number": 21,
+      "domain": "TADM10",
+      "question": "In the ABAP Dictionary two-level domain concept, how is a Data Element distinguished from a Domain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data Element defines technical data types; Domain defines primary key columns"
+        },
+        {
+          "id": "B",
+          "text": "Data Element defines semantic attributes (field labels/documentation); Domain defines technical attributes"
+        },
+        {
+          "id": "C",
+          "text": "Data Element generates physical database tables; Domain creates logical views"
+        },
+        {
+          "id": "D",
+          "text": "Data Element coordinates lock objects; Domain stores table row contents"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q022",
+      "question_number": 22,
+      "domain": "TADM10",
+      "question": "In CTS, what is the immediate technical effect on repository objects when a developer releases a transport request in SE09/SE10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Objects are instantly activated in production database system"
+        },
+        {
+          "id": "B",
+          "text": "Object locks are deleted, allowing other developers to record changes in new transport requests"
+        },
+        {
+          "id": "C",
+          "text": "Repository objects are automatically deleted from development system"
+        },
+        {
+          "id": "D",
+          "text": "Transport request is converted into executable SAP Note SAR file"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q023",
+      "question_number": 23,
+      "domain": "TADM10",
+      "question": "Which authorization object is required to maintain user master records for a specific User Group in SU01 or SUGR?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S_TABU_DIS"
+        },
+        {
+          "id": "B",
+          "text": "S_USER_GRP"
+        },
+        {
+          "id": "C",
+          "text": "S_USER_AGR"
+        },
+        {
+          "id": "D",
+          "text": "S_USER_SYS"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q024",
+      "question_number": 24,
+      "domain": "TADM10",
+      "question": "Where are developer trace files (dev_*) physically stored on the application server file system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/usr/sap/<SID>/<instance>/log/TRACE"
+        },
+        {
+          "id": "B",
+          "text": "/usr/sap/<SID>/<instance>/work"
+        },
+        {
+          "id": "C",
+          "text": "/usr/sap/trans/log"
+        },
+        {
+          "id": "D",
+          "text": "/var/log/sap/<SID>"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q025",
+      "question_number": 25,
+      "domain": "TADM10",
+      "question": "When AS ABAP is configured as the UME data source for AS Java, how are ABAP PFCG roles depicted in AS Java?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mapped as JEE Security Actions"
+        },
+        {
+          "id": "B",
+          "text": "Depicted as UME Groups of the same name"
+        },
+        {
+          "id": "C",
+          "text": "Mapped as UME User Master Records"
+        },
+        {
+          "id": "D",
+          "text": "Depicted as Access Control Lists (ACLs)"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q026",
+      "question_number": 26,
+      "domain": "TADM10",
+      "question": "Which transaction code opens the BAPI Explorer in AS ABAP to navigate Business Objects and methods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SWO1"
+        },
+        {
+          "id": "B",
+          "text": "SE37"
+        },
+        {
+          "id": "C",
+          "text": "BAPI"
+        },
+        {
+          "id": "D",
+          "text": "SM59"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q027",
+      "question_number": 27,
+      "domain": "TADM10",
+      "question": "In SAP Fiori landscape, how do classic applications (ABAP GUI / Web Dynpro) communicate with the back-end system (BES)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through OData v2 services routed via UME in AS Java"
+        },
+        {
+          "id": "B",
+          "text": "Directly to back-end server (BES) via DIAG or WebGUI/HTTPS protocols"
+        },
+        {
+          "id": "C",
+          "text": "Exclusively through SAP Web Dispatcher transforming requests into JSON"
+        },
+        {
+          "id": "D",
+          "text": "Via Application Link Enabling (ALE) IDoc communication channels"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q028",
+      "question_number": 28,
+      "domain": "TADM10",
+      "question": "What is the structural distinction between Technical Catalogs and Business Catalogs in SAP Fiori?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technical Catalogs are client-dependent; Business Catalogs are client-independent"
+        },
+        {
+          "id": "B",
+          "text": "Technical Catalogs group app descriptors by solution area; Business Catalogs reference them by user duty"
+        },
+        {
+          "id": "C",
+          "text": "Technical Catalogs are assigned to end users; Business Catalogs only to developers"
+        },
+        {
+          "id": "D",
+          "text": "Technical Catalogs store FLP personalization; Business Catalogs store database tables"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q029",
+      "question_number": 29,
+      "domain": "TADM10",
+      "question": "Which SAP transaction code is used to view and analyze application server events in the System Log (syslog)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SM50"
+        },
+        {
+          "id": "B",
+          "text": "SM12"
+        },
+        {
+          "id": "C",
+          "text": "SM21"
+        },
+        {
+          "id": "D",
+          "text": "ST05"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q030",
+      "question_number": 30,
+      "domain": "TADM10",
+      "question": "What is the primary function of the SAP Road Map Explorer web portal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To log customer support incidents and request license keys"
+        },
+        {
+          "id": "B",
+          "text": "To search, view, and explore planned innovations and release roadmaps"
+        },
+        {
+          "id": "C",
+          "text": "To download kernel binaries and patch sets"
+        },
+        {
+          "id": "D",
+          "text": "To configure HTTP destinations in NetWeaver Administrator"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q031",
+      "question_number": 31,
+      "domain": "TADM10",
+      "question": "During AS ABAP startup, which utility is initialized first by sapstartsrv to copy binaries from global to local directory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sapstart"
+        },
+        {
+          "id": "B",
+          "text": "sapcpe"
+        },
+        {
+          "id": "C",
+          "text": "sapcontrol"
+        },
+        {
+          "id": "D",
+          "text": "saphostexec"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q032",
+      "question_number": 32,
+      "domain": "TADM10",
+      "question": "What happens to update records in SM13 currently in progress or terminated when the AS ABAP system is stopped?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Permanently lost and must be re-entered"
+        },
+        {
+          "id": "B",
+          "text": "Remain stored in database tables (VBKD/VBMOD/VBPRA) and can be processed after restart"
+        },
+        {
+          "id": "C",
+          "text": "Automatically convert into background jobs in SM36"
+        },
+        {
+          "id": "D",
+          "text": "Rolled back completely and deleted from transaction log"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q033",
+      "question_number": 33,
+      "domain": "TADM10",
+      "question": "In RZ10 profile maintenance, which syntax is used to reference another profile parameter or system variable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wrapping in angle brackets <...>"
+        },
+        {
+          "id": "B",
+          "text": "Prefixing with dollar sign and parentheses $(...)"
+        },
+        {
+          "id": "C",
+          "text": "Enclosing in percentage signs %...%"
+        },
+        {
+          "id": "D",
+          "text": "Prefixing with keyword #REF:"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q034",
+      "question_number": 34,
+      "domain": "TADM10",
+      "question": "How do reserved (restricted) dialog work processes (rdisp/wp_no_restricted) behave during normal operation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Process background jobs when SM37 queue exceeds 50"
+        },
+        {
+          "id": "B",
+          "text": "Remain idle; activate only when all standard dialog processes enter Hold status to resolve deadlocks"
+        },
+        {
+          "id": "C",
+          "text": "Handle incoming HTTP requests dispatched by ICM"
+        },
+        {
+          "id": "D",
+          "text": "Automatically convert into update work processes during night mode"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q035",
+      "question_number": 35,
+      "domain": "TADM10",
+      "question": "In AS Java, which offline configuration tool must be used to modify Java Virtual Machine (JVM) parameters in database template?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adjusting number of server processes (Set Node Count)"
+        },
+        {
+          "id": "B",
+          "text": "Configuring JVM memory parameters such as maxHeapSize (-Xmx)"
+        },
+        {
+          "id": "C",
+          "text": "Changing log severity thresholds for deployed applications"
+        },
+        {
+          "id": "D",
+          "text": "Starting or stopping individual Java applications"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q036",
+      "question_number": 36,
+      "domain": "TADM10",
+      "question": "In ICM architecture, which internal thread accepts incoming TCP/IP requests and allocates a worker thread from thread pool?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Watchdog"
+        },
+        {
+          "id": "B",
+          "text": "Signal Handler"
+        },
+        {
+          "id": "C",
+          "text": "Thread Control"
+        },
+        {
+          "id": "D",
+          "text": "Memory Pipe"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q037",
+      "question_number": 37,
+      "domain": "TADM10",
+      "question": "Which command-line option is used with sapwebdisp to test and verify SAP Web Dispatcher profile syntax and connectivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sapwebdisp -testall"
+        },
+        {
+          "id": "B",
+          "text": "sapwebdisp pf=<profile> -checkconfig"
+        },
+        {
+          "id": "C",
+          "text": "sapwebdisp -validate"
+        },
+        {
+          "id": "D",
+          "text": "sapwebdisp -verify"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q038",
+      "question_number": 38,
+      "domain": "TADM10",
+      "question": "What architectural characteristic distinguishes Embedded Deployment of SAP Fiori Front-End Server (FES) from Hub Deployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "FLP UI components and Gateway framework run on same instance as S/4HANA back-end logic"
+        },
+        {
+          "id": "B",
+          "text": "Requires dedicated external Web Dispatcher instance for every client connection"
+        },
+        {
+          "id": "C",
+          "text": "Hub deployment removes requirement for OData service registration in /IWFND/MAINT_SERVICE"
+        },
+        {
+          "id": "D",
+          "text": "Embedded deployment supports only classic SAP GUI for HTML"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q039",
+      "question_number": 39,
+      "domain": "TADM10",
+      "question": "Which task list in transaction STC01 performs rapid activation and setup of SAP Gateway and Fiori in an embedded setup?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP_ESH_INITIAL_SETUP_WRK_CLIENT"
+        },
+        {
+          "id": "B",
+          "text": "SAP_GW_FIORI_ERP_ONE_CLNT_SETUP"
+        },
+        {
+          "id": "C",
+          "text": "SAP_BW_SETUP_INITIAL_S4HANA"
+        },
+        {
+          "id": "D",
+          "text": "SAP_BASIS_SYSTEM_CONFIG_CHECK"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q040",
+      "question_number": 40,
+      "domain": "TADM10",
+      "question": "When activating Fiori apps in mass via SAP_FIORI_CONTENT_ACTIVATION, what primary entity is selected to trigger activation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Single transaction codes from SE93"
+        },
+        {
+          "id": "B",
+          "text": "SAP Business Roles (SAP_BR_*)"
+        },
+        {
+          "id": "C",
+          "text": "Background jobs from SM36"
+        },
+        {
+          "id": "D",
+          "text": "RFC Destinations from SM59"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q041",
+      "question_number": 41,
+      "domain": "TADM10",
+      "question": "Which transaction code opens the SAP Fiori Launchpad App Manager (FLPAM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "/UI2/FLPAM"
+        },
+        {
+          "id": "B",
+          "text": "SICF"
+        },
+        {
+          "id": "C",
+          "text": "/IWFND/MAINT_SERVICE"
+        },
+        {
+          "id": "D",
+          "text": "SPRO"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q042",
+      "question_number": 42,
+      "domain": "TADM10",
+      "question": "Which parameter defines the URL of the external learning content server for In-App Help (SAP Companion)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HELP_SERVER_IP_ADDRESS"
+        },
+        {
+          "id": "B",
+          "text": "LEARNING_APP_BACKEND_URL"
+        },
+        {
+          "id": "C",
+          "text": "WDISP_HELP_REDIRECT"
+        },
+        {
+          "id": "D",
+          "text": "ICM_HELP_PORT"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q043",
+      "question_number": 43,
+      "domain": "TADM10",
+      "question": "In AS ABAP, which central transaction code manages SAPconnect settings, SMTP nodes, send jobs, and routing rules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SM59"
+        },
+        {
+          "id": "B",
+          "text": "SCOT"
+        },
+        {
+          "id": "C",
+          "text": "SM21"
+        },
+        {
+          "id": "D",
+          "text": "SOAMANAGER"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q044",
+      "question_number": 44,
+      "domain": "TADM10",
+      "question": "Which ABAP report program must be scheduled periodically to send queued outbound email messages to external SMTP server?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RSCONN01"
+        },
+        {
+          "id": "B",
+          "text": "RSPO1041"
+        },
+        {
+          "id": "C",
+          "text": "RDDIMPDP"
+        },
+        {
+          "id": "D",
+          "text": "RSBTCNSH"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q045",
+      "question_number": 45,
+      "domain": "TADM10",
+      "question": "In 64-bit AS ABAP Linux, what is the default allocation order of memory types when executing an ABAP dialog step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extended Memory -> Roll Memory -> Heap Memory"
+        },
+        {
+          "id": "B",
+          "text": "Roll Memory (initial) -> Extended Memory -> Heap Memory (or Extended Memory -> Priv Memory)"
+        },
+        {
+          "id": "C",
+          "text": "Heap Memory -> Extended Memory -> Swap Space"
+        },
+        {
+          "id": "D",
+          "text": "Paging Memory -> Shared Memory -> Heap Memory"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q046",
+      "question_number": 46,
+      "domain": "TADM12",
+      "question": "To which central database repository in Solution Manager do managed systems automatically send landscape descriptions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "System Landscape Directory (SLD) only"
+        },
+        {
+          "id": "B",
+          "text": "Landscape Management Database (LMDB)"
+        },
+        {
+          "id": "C",
+          "text": "Customer Center of Expertise (CCOE) Repository"
+        },
+        {
+          "id": "D",
+          "text": "Software Provisioning Manager (SWPM) Configuration Store"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q047",
+      "question_number": 47,
+      "domain": "TADM12",
+      "question": "Which SAP Support Portal tool provides official technical release planning, supported OS/DB versions, and maintenance schedules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Software Provisioning Manager 2.0 (SWPM)"
+        },
+        {
+          "id": "B",
+          "text": "Product Availability Matrix (PAM)"
+        },
+        {
+          "id": "C",
+          "text": "Quick Sizer Tool"
+        },
+        {
+          "id": "D",
+          "text": "Landscape Information Service (LIS)"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q048",
+      "question_number": 48,
+      "domain": "TADM12",
+      "question": "Which category of table data is stored with client dependency and includes business transaction records (sales orders, invoices)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cross-client Customizing data"
+        },
+        {
+          "id": "B",
+          "text": "ABAP Repository objects"
+        },
+        {
+          "id": "C",
+          "text": "Client-specific Application data"
+        },
+        {
+          "id": "D",
+          "text": "System Landscape Directory metadata"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q049",
+      "question_number": 49,
+      "domain": "TADM12",
+      "question": "In transaction SCC4, which protection level prevents a target client from being overwritten during a client copy operation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protection level 0: No restriction"
+        },
+        {
+          "id": "B",
+          "text": "Protection level 1: No overwriting"
+        },
+        {
+          "id": "C",
+          "text": "Protection level 2: No overwriting and no external availability"
+        },
+        {
+          "id": "D",
+          "text": "Protection level 3: Restricted modification"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q050",
+      "question_number": 50,
+      "domain": "TADM12",
+      "question": "During TMS initialization in transaction STMS, which dedicated user is created in client 000 with specialized RFC authorizations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDIC"
+        },
+        {
+          "id": "B",
+          "text": "TMSADM"
+        },
+        {
+          "id": "C",
+          "text": "SAP*"
+        },
+        {
+          "id": "D",
+          "text": "AUTO_TMS"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q051",
+      "question_number": 51,
+      "domain": "TADM12",
+      "question": "What functional distinction exists between a Consolidation Route and a Delivery Route in STMS route configuration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Consolidation route connects two prod systems; delivery route connects dev to QA"
+        },
+        {
+          "id": "B",
+          "text": "Consolidation route is addressed by a Transport Layer; delivery route forwards already imported transport requests"
+        },
+        {
+          "id": "C",
+          "text": "Consolidation route is for client customizing; delivery route is exclusively for ABAP Workbench objects"
+        },
+        {
+          "id": "D",
+          "text": "Consolidation route requires transport workflow; delivery route requires manual tp commands"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q052",
+      "question_number": 52,
+      "domain": "TADM12",
+      "question": "How does Transport Organizer (SE09/SE10) differentiate Customizing transport requests from Workbench transport requests?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Customizing requests store cross-client repository objects; Workbench requests store client-specific entries"
+        },
+        {
+          "id": "B",
+          "text": "Customizing requests record client-specific table entries; Workbench requests record cross-client repository objects and packages"
+        },
+        {
+          "id": "C",
+          "text": "Customizing requests require SSCR developer key; Workbench requests do not"
+        },
+        {
+          "id": "D",
+          "text": "Customizing requests are stored in /usr/sap/trans/data; Workbench requests bypass transport directory"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q053",
+      "question_number": 53,
+      "domain": "TADM12",
+      "question": "During Support Package import or upgrade, which transaction adjusts modified ABAP Dictionary objects before activation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SPAU"
+        },
+        {
+          "id": "B",
+          "text": "SPDD"
+        },
+        {
+          "id": "C",
+          "text": "SE03"
+        },
+        {
+          "id": "D",
+          "text": "SNOTE"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q054",
+      "question_number": 54,
+      "domain": "TADM12",
+      "question": "When 'import all' is executed in STMS, in what sequence does transport control program (tp) process import steps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Completes all phases for first request before starting next request"
+        },
+        {
+          "id": "B",
+          "text": "Executes each import phase collectively for all waiting transport requests (e.g. DDIC import first for all, then Activation)"
+        },
+        {
+          "id": "C",
+          "text": "Imports program code first, followed by table structures and background jobs"
+        },
+        {
+          "id": "D",
+          "text": "Processes Workbench requests sequentially and ignores Customizing requests"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q055",
+      "question_number": 55,
+      "domain": "TADM12",
+      "question": "Which background job in AS ABAP acts as the central import dispatcher, triggered by tp via sapevt event SAP_TRIGGER_RDDIMPDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R3TRANS_EXEC"
+        },
+        {
+          "id": "B",
+          "text": "RDDIMPDP"
+        },
+        {
+          "id": "C",
+          "text": "RDDMASGL_JOB"
+        },
+        {
+          "id": "D",
+          "text": "TMSADM_DISPATCH"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q056",
+      "question_number": 56,
+      "domain": "TADM12",
+      "question": "When HANDLING_OF_INACTIVE_TRANSPORTS = BREAK, what happens if an unapproved transport request is in QA import queue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Skips unapproved request and continues importing remaining requests"
+        },
+        {
+          "id": "B",
+          "text": "Import process terminates immediately without importing inactive or subsequent requests"
+        },
+        {
+          "id": "C",
+          "text": "Inactive request is automatically approved by TMSADM and imported"
+        },
+        {
+          "id": "D",
+          "text": "Import deletes inactive request from transport buffer file"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q057",
+      "question_number": 57,
+      "domain": "TADM12",
+      "question": "In a dual-track landscape, which tool automatically retrofits and synchronizes changes from Support track into Development track?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transport Target Grouping"
+        },
+        {
+          "id": "B",
+          "text": "Retrofit"
+        },
+        {
+          "id": "C",
+          "text": "Client Compare Adjustment"
+        },
+        {
+          "id": "D",
+          "text": "Shadow Repository Synchronization"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q058",
+      "question_number": 58,
+      "domain": "TADM12",
+      "question": "Which standard client copy profile copies Customizing and User master records, but excludes application transaction data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP_ALL"
+        },
+        {
+          "id": "B",
+          "text": "SAP_APPL"
+        },
+        {
+          "id": "C",
+          "text": "SAP_UCUS"
+        },
+        {
+          "id": "D",
+          "text": "SAP_USER"
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q059",
+      "question_number": 59,
+      "domain": "TADM12",
+      "question": "What major advantage do Transport-Based Correction Instructions (TCI) offer over traditional SNOTE correction instructions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do not require S user account or internet connectivity"
+        },
+        {
+          "id": "B",
+          "text": "Allow complex ABAP corrections (including Dictionary objects) in a single SAR archive for automatic implementation"
+        },
+        {
+          "id": "C",
+          "text": "Bypass CTS and update database directly without transport requests"
+        },
+        {
+          "id": "D",
+          "text": "Replace Software Update Manager (SUM) during release upgrades"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q060",
+      "question_number": 60,
+      "domain": "TADM12",
+      "question": "During SUM upgrade in Standard strategy mode, how is productive downtime minimized during dictionary activation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disabling database logging on primary tables during business hours"
+        },
+        {
+          "id": "B",
+          "text": "Operating a Shadow System and Shadow Repository during uptime to perform activation in parallel with user operation"
+        },
+        {
+          "id": "C",
+          "text": "Running R3trans directly on client 000 without stopping work processes"
+        },
+        {
+          "id": "D",
+          "text": "Converting application tables on an external Solution Manager system"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q061",
+      "question_number": 61,
+      "domain": "TADM12",
+      "question": "In SAP S/4HANA Server 2023, which foundational core software component replaces the traditional SAP_APPL component from SAP ECC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAP_BASIS 758"
+        },
+        {
+          "id": "B",
+          "text": "S4CORE"
+        },
+        {
+          "id": "C",
+          "text": "S4HCM"
+        },
+        {
+          "id": "D",
+          "text": "IS-OIL"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q062",
+      "question_number": 62,
+      "domain": "TADM12",
+      "question": "How does SWPM 2.0 populate target database during SAP S/4HANA installation compared to SWPM 1.0 export load procedure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Executes R3load scripts using text export files from DVD media"
+        },
+        {
+          "id": "B",
+          "text": "Builds database content by restoring a database backup delivered directly by SAP"
+        },
+        {
+          "id": "C",
+          "text": "Automatically triggers online database migration (DMO) from shadow MaxDB"
+        },
+        {
+          "id": "D",
+          "text": "Installs temporary MaxDB instance and converts via SQL scripts"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q063",
+      "question_number": 63,
+      "domain": "TADM12",
+      "question": "Why is 'ABAP Table Declustering and Depooling' an explicit choice in SWPM 1.0 for Solution Manager 7.2 (AS ABAP 7.40)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Declustering is mandatory for MaxDB but prohibited for SAP HANA"
+        },
+        {
+          "id": "B",
+          "text": "Table depooling is standard as of AS ABAP 7.50, but Solution Manager 7.2 uses AS ABAP 7.40"
+        },
+        {
+          "id": "C",
+          "text": "Declustering is required only if system is installed as High-Availability cluster"
+        },
+        {
+          "id": "D",
+          "text": "Depooling converts transparent tables into cluster tables to reduce disk space"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q064",
+      "question_number": 64,
+      "domain": "TADM12",
+      "question": "In RZ10 instance profile maintenance, which format is valid for configuring parameter PHYS_MEMSIZE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Must always be an exact integer number of kilobytes (e.g., 4194304)"
+        },
+        {
+          "id": "B",
+          "text": "Can be specified either as absolute value in MB (e.g., 4096) or percentage of physical RAM (e.g., 40%)"
+        },
+        {
+          "id": "C",
+          "text": "Must be set as floating-point gigabyte value (e.g., 4.0GB)"
+        },
+        {
+          "id": "D",
+          "text": "Unchangeable parameter requiring OS kernel restart"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q065",
+      "question_number": 65,
+      "domain": "TADM12",
+      "question": "What is the primary operational advantage of executing pre-defined task lists in transaction STC01 during post-installation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replaces SWPM and SUM by performing database upgrades without technical downtime"
+        },
+        {
+          "id": "B",
+          "text": "Automates complex initial configuration sequences (TMS setup, job scheduling, licensing) via standardized task steps"
+        },
+        {
+          "id": "C",
+          "text": "Automatically recompiles all C/C++ kernel binaries for local OS platform"
+        },
+        {
+          "id": "D",
+          "text": "Deletes client 000 and client 001 to enforce compliance with security baselines"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q066",
+      "question_number": 66,
+      "domain": "TADM12",
+      "question": "Why might an administrator execute a CISI run in SUM 2.0 prior to initiating a Support Package Stack update on S/4HANA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generate new SSL server PSE certificate for SAP Host Agent"
+        },
+        {
+          "id": "B",
+          "text": "Correct or update installed product version information in SAP system using CISI XML file from Maintenance Planner"
+        },
+        {
+          "id": "C",
+          "text": "Perform full offline database backup before shadow instance creation"
+        },
+        {
+          "id": "D",
+          "text": "Automatically convert custom ABAP code to ABAP Cloud syntax"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q067",
+      "question_number": 67,
+      "domain": "TADM12",
+      "question": "In SUM 2.0, what is the core purpose of Silent Data Migration (SDM)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Migrate underlying database from MaxDB to SAP HANA silently during startup"
+        },
+        {
+          "id": "B",
+          "text": "Convert application data to changed table structures in background during productive uptime after update"
+        },
+        {
+          "id": "C",
+          "text": "Compress historical spool requests in TemSe without generating job logs"
+        },
+        {
+          "id": "D",
+          "text": "Silently transfer transport requests from development to production domain"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q068",
+      "question_number": 68,
+      "domain": "TADM12",
+      "question": "When updating an AS ABAP system using SUM, what distinguishes Single System strategy from Standard strategy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creates two parallel shadow databases to eliminate downtime completely"
+        },
+        {
+          "id": "B",
+          "text": "Features longer technical downtime and builds no shadow instance, requiring less free database space and memory"
+        },
+        {
+          "id": "C",
+          "text": "Requires system to be installed on SAP HANA and does not support MaxDB"
+        },
+        {
+          "id": "D",
+          "text": "Automatically runs SGEN during uptime to pre-generate all program loads"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q069",
+      "question_number": 69,
+      "domain": "TADM12",
+      "question": "Why does SUM display a warning regarding UME when updating Solution Manager Java (SMJ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stores UME user accounts in external LDAP directory that must be offline"
+        },
+        {
+          "id": "B",
+          "text": "AS Java uses remote UME in SolMan ABAP system (SMA), requiring ABAP system to remain up and running throughout Java update"
+        },
+        {
+          "id": "C",
+          "text": "Must permanently delete J2EE_ADMIN account to enforce AES-256 encryption"
+        },
+        {
+          "id": "D",
+          "text": "Cannot execute SUM unless Enqueue Replication Server (ERS) is stopped"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q070",
+      "question_number": 70,
+      "domain": "TADM12",
+      "question": "When Enqueue Replication Server (ERS) is installed in High-Availability AS ABAP, how must enqueue work processes be configured?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At least two dynamic enqueue work processes on every Additional Application Server (AAS)"
+        },
+        {
+          "id": "B",
+          "text": "Enqueue work processes are strictly prohibited on AS ABAP application servers when ERS is active"
+        },
+        {
+          "id": "C",
+          "text": "Must be placed inside ERS instance profile alongside sapcpe"
+        },
+        {
+          "id": "D",
+          "text": "One enqueue work process reserved exclusively for Class A background jobs"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q071",
+      "question_number": 71,
+      "domain": "TADM12",
+      "question": "In Solution Manager 7.2, what role does Landscape Management Database (LMDB) perform in relation to SLD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Read-only mirror of SAP Support Portal PAM data"
+        },
+        {
+          "id": "B",
+          "text": "Central single source of truth for technical system descriptions required by Maintenance Planner and monitoring"
+        },
+        {
+          "id": "C",
+          "text": "Stores Java source code while SLD stores compiled ABAP program loads"
+        },
+        {
+          "id": "D",
+          "text": "Used exclusively for managing background job server groups in SM61"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q072",
+      "question_number": 72,
+      "domain": "TADM12",
+      "question": "Which generated file from Maintenance Planner is mandatory for driving SUM updates or SWPM stack-guided installations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sapinst_dev.log"
+        },
+        {
+          "id": "B",
+          "text": "Stack XML file (e.g., MP_Stack_...xml)"
+        },
+        {
+          "id": "C",
+          "text": "R3trans.log"
+        },
+        {
+          "id": "D",
+          "text": "LABEL.ASC"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q073",
+      "question_number": 73,
+      "domain": "TADM12",
+      "question": "Which setting for rspo/store_location stores TemSe print request data in database table TST03 for automatic database backups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "rspo/store_location = G"
+        },
+        {
+          "id": "B",
+          "text": "rspo/store_location = db"
+        },
+        {
+          "id": "C",
+          "text": "rspo/store_location = L"
+        },
+        {
+          "id": "D",
+          "text": "rspo/store_location = T"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q074",
+      "question_number": 74,
+      "domain": "TADM12",
+      "question": "Which ABAP program must be scheduled periodically in background to delete old, outdated spool requests from spool database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RSPO1041"
+        },
+        {
+          "id": "B",
+          "text": "RSBTCDEL2"
+        },
+        {
+          "id": "C",
+          "text": "RSPO1043"
+        },
+        {
+          "id": "D",
+          "text": "SGEN"
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "why": ""
+    },
+    {
+      "id": "EXTRA_Q075",
+      "question_number": 75,
+      "domain": "TADM12",
+      "question": "How does standard background job scheduling in SAP S/4HANA differ from traditional AS ABAP systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Requires all background jobs to be scheduled manually via SM36 in client 000 only"
+        },
+        {
+          "id": "B",
+          "text": "Uses Technical Job Repository (SJOBREPO), which automatically manages and schedules standard technical background jobs"
+        },
+        {
+          "id": "C",
+          "text": "Executes background jobs using external OS commands (sapevt) exclusively"
+        },
+        {
+          "id": "D",
+          "text": "Disables background work processes and processes batch jobs inside Java Server Nodes"
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "why": ""
+    }
+  ]
+}

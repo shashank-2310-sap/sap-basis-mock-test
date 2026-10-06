@@ -1,5 +1,6 @@
 import rawBasisImp from './data/questions.json'
 import rawUnitEnd from './data/questions-unit-end.json'
+import rawExtra from './data/questions-extra.json'
 import type { Question, QuestionBank } from './types'
 import { validateBank, type ValidationResult } from './lib/validate'
 
@@ -25,6 +26,7 @@ function buildSet(id: string, name: string, raw: unknown, expectedCount: number)
 export const SETS: QuestionSet[] = [
   buildSet('basis-imp', 'SAP Basis Imp Questions', rawBasisImp, 181),
   buildSet('unit-end', 'Unit End Questions', rawUnitEnd, 275),
+  buildSet('extra', 'Extra Questions', rawExtra, 75),
 ]
 
 export const DEFAULT_SET_ID = SETS[0].id

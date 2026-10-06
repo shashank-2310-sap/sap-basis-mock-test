@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useQuestionSet } from '../context/QuestionSetProvider'
 import { useTestSession } from '../context/TestSession'
-import { buildTest, PASS_SCORE, TEST_DURATION_SEC, TEST_SIZE } from '../lib/testGen'
+import { buildTest, passScoreFor, TEST_DURATION_SEC, testSizeFor } from '../lib/testGen'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -10,8 +10,11 @@ export function TestSetup() {
   const { set } = useQuestionSet()
   const { setPending } = useTestSession()
 
+  const testSize = testSizeFor(set.questions.length)
+  const passScore = passScoreFor(testSize)
+
   function start() {
-    const built = buildTest(set.questions, TEST_SIZE)
+    const built = buildTest(set.questions, testSize)
     setPending(built)
     nav('/test/run')
   }
@@ -25,9 +28,9 @@ export function TestSetup() {
         </CardHeader>
         <CardContent className="space-y-4">
           <ul className="space-y-2 text-foreground/90">
-            <li>• <strong>{TEST_SIZE} questions</strong> drawn at random from all {set.questions.length}, no repeats.</li>
+            <li>• <strong>{testSize} questions</strong> drawn at random from all {set.questions.length}, no repeats.</li>
             <li>• <strong>{TEST_DURATION_SEC / 60}-minute</strong> countdown; the test finalizes automatically at zero.</li>
-            <li>• Pass mark is <strong>{PASS_SCORE}/{TEST_SIZE} (75%)</strong>.</li>
+            <li>• Pass mark is <strong>{passScore}/{testSize} (75%)</strong>.</li>
             <li>• One question per screen. Move with Previous / Next or the navigator.</li>
             <li>• Multiple-answer questions need the <strong>exact</strong> set — no partial credit, no negative marking.</li>
             <li>• Answers stay hidden until the test ends.</li>

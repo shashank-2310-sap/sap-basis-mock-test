@@ -1,0 +1,7 @@
+# Normalize line endings. Store everything as LF in the repo, and check out LF
+# in the working tree too (so Git's autocrlf conversion no longer applies and
+# the "LF will be replaced by CRLF" warnings stop). Standard for Vite/TS repos.
+* text=auto eol=lf
+
+# Explicitly treat the bundled/source question banks as LF text.
+*.json text eol=lf

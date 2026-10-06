@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { buildTest, buildPractice, TEST_SIZE } from './testGen'
+import { buildTest, buildPractice, passScoreFor, TEST_SIZE, testSizeFor } from './testGen'
 import type { Question } from '../types'
 
 function fakeBank(n: number): Question[] {
@@ -44,5 +44,18 @@ describe('buildPractice', () => {
     const built = buildPractice(all)
     expect(built).toHaveLength(50)
     expect(new Set(built.map((b) => b.question.id)).size).toBe(50)
+  })
+})
+
+describe('adaptive test size & pass mark', () => {
+  it('caps the test at TEST_SIZE for large pools but uses the whole pool when smaller', () => {
+    expect(testSizeFor(275)).toBe(TEST_SIZE)
+    expect(testSizeFor(181)).toBe(TEST_SIZE)
+    expect(testSizeFor(75)).toBe(75)
+  })
+  it('requires at least 75% to pass, rounding up', () => {
+    expect(passScoreFor(80)).toBe(60) // unchanged for full-size tests
+    expect(passScoreFor(75)).toBe(57) // ceil(56.25)
+    expect(passScoreFor(75) / 75).toBeGreaterThanOrEqual(0.75)
   })
 })

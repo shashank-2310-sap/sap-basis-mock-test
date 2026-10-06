@@ -20,6 +20,7 @@ export default defineConfig({
         // React/Radix). A single vendor chunk avoids cross-vendor circular chunks.
         manualChunks(id) {
           if (id.includes('/src/data/questions-unit-end.json')) return 'bank-unit-end'
+          if (id.includes('/src/data/questions-extra.json')) return 'bank-extra'
           if (id.includes('/src/data/questions.json')) return 'bank-basis-imp'
           if (id.includes('node_modules')) return 'vendor'
         },

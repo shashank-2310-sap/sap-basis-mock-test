@@ -5284,7 +5284,7 @@
     {
       "id": "C_TADM_23_Q175",
       "question_number": 175,
-      "domain": "Mixed",
+      "domain": "HA200",
       "question": "Which app types need SAP HANA as system database? (2)",
       "options": [
         {

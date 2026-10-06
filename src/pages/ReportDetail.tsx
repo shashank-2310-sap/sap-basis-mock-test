@@ -8,7 +8,7 @@ import { OptionList } from '../components/OptionList'
 import { getReport } from '../lib/db'
 import { formatDateTime, formatDuration } from '../lib/format'
 import { isMultiAnswer } from '../lib/scoring'
-import { PASS_SCORE } from '../lib/testGen'
+import { passScoreFor } from '../lib/testGen'
 import type { EndReason, StoredReport } from '../types'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -96,7 +96,7 @@ export function ReportDetail() {
 
           <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             <SummaryStat value={`${report.score}/${report.total}`} label="Score" tone={passed ? 'good' : 'bad'} />
-            <SummaryStat value={`${report.percentage}%`} label={`Pass ${Math.round((PASS_SCORE / report.total) * 100)}%`} />
+            <SummaryStat value={`${report.percentage}%`} label={`Pass ${Math.round((passScoreFor(report.total) / report.total) * 100)}%`} />
             <SummaryStat value={report.correctCount} label="Correct" tone="good" />
             <SummaryStat value={report.incorrectCount} label="Incorrect" tone="bad" />
             <SummaryStat value={report.unansweredCount} label="Unanswered" />

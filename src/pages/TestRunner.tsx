@@ -24,7 +24,7 @@ import { useTestSession } from '../context/TestSession'
 import { newAttemptId } from '../lib/format'
 import { isCorrect } from '../lib/scoring'
 import { saveReport, REPORT_SCHEMA_VERSION } from '../lib/db'
-import { PASS_SCORE, TEST_DURATION_SEC } from '../lib/testGen'
+import { passScoreFor, TEST_DURATION_SEC } from '../lib/testGen'
 import type { BuiltQuestion, EndReason, StoredReport } from '../types'
 
 export function TestRunner() {
@@ -105,7 +105,7 @@ export function TestRunner() {
         score,
         total,
         percentage: total > 0 ? Math.round((score / total) * 100) : 0,
-        passed: score >= PASS_SCORE,
+        passed: score >= passScoreFor(total),
         timeUsedSec,
         endReason: reason,
         correctCount,

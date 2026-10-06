@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { TEST_SIZE, TEST_DURATION_SEC, PASS_SCORE } from '../lib/testGen'
+import { TEST_DURATION_SEC, passScoreFor, testSizeFor } from '../lib/testGen'
 import { useQuestionSet } from '../context/QuestionSetProvider'
 import { SetSwitcher } from '../components/SetSwitcher'
 import { Badge } from '@/components/ui/badge'
@@ -20,12 +20,14 @@ export function Home() {
   const c = set.validation.counts
   const totalQuestions = set.questions.length
   const domains = Object.entries(c.byDomain).sort((a, b) => b[1] - a[1])
+  const testSize = testSizeFor(totalQuestions)
+  const passScore = passScoreFor(testSize)
 
   const modes = [
     {
       to: '/test',
       title: 'Test Mode',
-      body: `${TEST_SIZE} random questions, ${TEST_DURATION_SEC / 60}-minute timer, ${PASS_SCORE}/${TEST_SIZE} to pass.`,
+      body: `${testSize} random questions, ${TEST_DURATION_SEC / 60}-minute timer, ${passScore}/${testSize} to pass.`,
       cta: 'Start a test',
     },
     {
@@ -61,8 +63,8 @@ export function Home() {
         <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             <Stat value={c.total} label="Total questions" />
-            <Stat value={TEST_SIZE} label="Questions per test" />
-            <Stat value={`${PASS_SCORE}/${TEST_SIZE}`} label="Passing score (75%)" />
+            <Stat value={testSize} label="Questions per test" />
+            <Stat value={`${passScore}/${testSize}`} label="Passing score (75%)" />
             <Stat value={`${TEST_DURATION_SEC / 60} min`} label="Time limit" />
           </div>
           {set.id !== 'unit-end' && (
