@@ -5370,7 +5370,7 @@
       "correct_answers": [
         "C"
       ],
-      "why": "The default domain for outbound e-mail is maintained in transaction SCOT (Business Communication Administration -> Settings -> SMTP connection -> Outbound Settings -> Default Domain). The report, profile parameter, and file listed are not used to set it."
+      "why": "The default domain for outbound e-mail is maintained in transaction SCOT, under its default-domain setting. The report, profile parameter, and file listed are not used to set it."
     },
     {
       "id": "C_TADM_23_Q178",
@@ -5489,7 +5489,7 @@
         "B",
         "C"
       ],
-      "why": "For a HANA tailored data center integration deployment SAP recommends sizing main memory (HANA is an in-memory database), persistent storage (data and log volumes, needed for durability and recovery), and IOPS (the storage must meet HANA's I/O performance KPIs). Network throughput and SAPS are not part of this TDI sizing recommendation."
+      "why": "For a HANA tailored data center integration deployment this question calls for sizing main memory (HANA is an in-memory database), persistent storage (data and log volumes, needed for durability and recovery), and IOPS (the storage must meet HANA's I/O performance KPIs). Network throughput and SAPS are not among those three."
     }
   ]
 }
