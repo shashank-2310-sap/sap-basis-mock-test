@@ -3892,9 +3892,9 @@
         }
       ],
       "correct_answers": [
-        "A"
+        "B"
       ],
-      "why": ""
+      "why": "SAP Load Generator (SGEN): \nTransaction SGEN allows you to select multiple application servers for parallel load generation in a single run. \nYou can configure it to run across all servers with matching machine types simultaneously without restarting the entire generation process multiple times."
     },
     {
       "id": "C_TADM_23_Q131",
