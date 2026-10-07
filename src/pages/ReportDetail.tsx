@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CheckCircle2, XCircle } from 'lucide-react'
-import { getQuestion, getSet, DEFAULT_SET_ID } from '../bank'
+import { getQuestion, setNameFor, DEFAULT_SET_ID } from '../bank'
 import { AnswerTypeBadge, DomainBadge } from '../components/Badge'
 import { Explanation } from '../components/Explanation'
 import { OptionList } from '../components/OptionList'
@@ -16,6 +16,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
 const LETTERS = 'ABCDEFGH'
+
+type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'unanswered'
+
+/** Status of a single answered question, derived from the stored report (not the
+ *  live bank), so it stays correct even if a question later leaves the bank. */
+function statusOf(report: StoredReport, qid: string): Exclude<ReviewFilter, 'all'> {
+  if (report.correctness[qid]) return 'correct'
+  return (report.selections[qid]?.length ?? 0) > 0 ? 'incorrect' : 'unanswered'
+}
 
 const END_REASON_LABEL: Record<EndReason, string> = {
   manual: 'Manually ended',
@@ -45,6 +54,7 @@ function SummaryStat({
 export function ReportDetail() {
   const { id } = useParams()
   const [report, setReport] = useState<StoredReport | null | undefined>(undefined)
+  const [filter, setFilter] = useState<ReviewFilter>('all')
 
   useEffect(() => {
     if (!id) return
@@ -78,7 +88,7 @@ export function ReportDetail() {
             <div>
               <h1 className="text-2xl font-extrabold text-foreground">Test result</h1>
               <p className="text-sm text-muted-foreground">
-                {getSet(report.setId ?? DEFAULT_SET_ID).name} · {formatDateTime(report.timestamp)}
+                {setNameFor(report.setId ?? DEFAULT_SET_ID)} · {formatDateTime(report.timestamp)}
               </p>
             </div>
             <span
@@ -116,58 +126,106 @@ export function ReportDetail() {
       </Card>
 
       <section>
-        <h2 className="mb-3 text-lg font-bold text-foreground">Question-by-question review</h2>
-        <ol className="space-y-5">
-          {report.questionIds.map((qid, i) => {
-            const q = getQuestion(qid)
-            if (!q) {
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-lg font-bold text-foreground">Question-by-question review</h2>
+          <div role="radiogroup" aria-label="Filter questions" className="inline-flex flex-wrap gap-1 rounded-lg border bg-muted p-1">
+            {([
+              { value: 'all', label: 'All', count: report.total },
+              { value: 'correct', label: 'Correct', count: report.correctCount },
+              { value: 'incorrect', label: 'Incorrect', count: report.incorrectCount },
+              { value: 'unanswered', label: 'Unanswered', count: report.unansweredCount },
+            ] as const).map((f) => {
+              const active = filter === f.value
               return (
-                <li key={qid}>
-                  <Card className="p-5 text-sm text-muted-foreground">
-                    Question {i + 1}: no longer present in the bank ({qid}).
-                  </Card>
-                </li>
+                <button
+                  key={f.value}
+                  type="button"
+                  role="radio"
+                  aria-checked={active}
+                  onClick={() => setFilter(f.value)}
+                  className={cn(
+                    'rounded-md px-3 py-1.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+                    active
+                      ? 'bg-primary text-primary-foreground shadow'
+                      : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+                  )}
+                >
+                  {f.label}{' '}
+                  <span className={cn('font-normal', active ? 'text-primary-foreground/80' : 'text-muted-foreground/70')}>
+                    ({f.count})
+                  </span>
+                </button>
               )
-            }
-            const order = report.optionOrders[qid] ?? q.options.map((o) => o.id)
-            const selected = report.selections[qid] ?? []
-            const ok = report.correctness[qid]
-            const answered = selected.length > 0
-            const correctLetters = q.correct_answers
-              .map((cid) => LETTERS[order.indexOf(cid)] ?? '?')
-              .sort()
-              .join(', ')
+            })}
+          </div>
+        </div>
+        {(() => {
+          const rows = report.questionIds
+            .map((qid, i) => ({ qid, i }))
+            .filter(({ qid }) => filter === 'all' || statusOf(report, qid) === filter)
 
+          if (rows.length === 0) {
             return (
-              <li key={qid}>
-                <Card>
-                  <CardContent className="p-5">
-                    <div className="mb-2 flex flex-wrap items-center gap-2">
-                      <span className="font-bold text-muted-foreground">#{i + 1}</span>
-                      <DomainBadge domain={q.domain} />
-                      <AnswerTypeBadge multi={isMultiAnswer(q)} />
-                      <span className="ml-auto">
-                        <Badge variant={ok ? 'success' : answered ? 'danger' : 'secondary'}>
-                          {ok ? '✓ Correct' : answered ? '✗ Incorrect' : '— Not answered'}
-                        </Badge>
-                      </span>
-                    </div>
-                    <h3 className="font-semibold leading-snug text-foreground">{q.question}</h3>
-                    <div className="mt-3">
-                      <OptionList built={{ question: q, optionOrder: order }} selected={selected} review />
-                    </div>
-                    <p className="mt-3 text-sm font-semibold text-foreground/90">
-                      Complete correct answer: {correctLetters || '(none)'}
-                    </p>
-                    <div className="mt-3">
-                      <Explanation why={q.why} />
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
+              <Card className="p-6 text-center text-sm text-muted-foreground">
+                No {filter} questions in this attempt.
+              </Card>
             )
-          })}
-        </ol>
+          }
+
+          return (
+            <ol className="space-y-5">
+              {rows.map(({ qid, i }) => {
+                const q = getQuestion(qid)
+                if (!q) {
+                  return (
+                    <li key={qid}>
+                      <Card className="p-5 text-sm text-muted-foreground">
+                        Question {i + 1}: no longer present in the bank ({qid}).
+                      </Card>
+                    </li>
+                  )
+                }
+                const order = report.optionOrders[qid] ?? q.options.map((o) => o.id)
+                const selected = report.selections[qid] ?? []
+                const ok = report.correctness[qid]
+                const answered = selected.length > 0
+                const correctLetters = q.correct_answers
+                  .map((cid) => LETTERS[order.indexOf(cid)] ?? '?')
+                  .sort()
+                  .join(', ')
+
+                return (
+                  <li key={qid}>
+                    <Card>
+                      <CardContent className="p-5">
+                        <div className="mb-2 flex flex-wrap items-center gap-2">
+                          <span className="font-bold text-muted-foreground">#{i + 1}</span>
+                          <DomainBadge domain={q.domain} />
+                          <AnswerTypeBadge multi={isMultiAnswer(q)} />
+                          <span className="ml-auto">
+                            <Badge variant={ok ? 'success' : answered ? 'danger' : 'secondary'}>
+                              {ok ? '✓ Correct' : answered ? '✗ Incorrect' : '— Not answered'}
+                            </Badge>
+                          </span>
+                        </div>
+                        <h3 className="font-semibold leading-snug text-foreground">{q.question}</h3>
+                        <div className="mt-3">
+                          <OptionList built={{ question: q, optionOrder: order }} selected={selected} review />
+                        </div>
+                        <p className="mt-3 text-sm font-semibold text-foreground/90">
+                          Complete correct answer: {correctLetters || '(none)'}
+                        </p>
+                        <div className="mt-3">
+                          <Explanation why={q.why} />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </li>
+                )
+              })}
+            </ol>
+          )
+        })()}
       </section>
     </div>
   )

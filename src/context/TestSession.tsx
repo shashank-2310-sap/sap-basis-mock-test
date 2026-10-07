@@ -5,15 +5,22 @@ import type { BuiltQuestion } from '../types'
 // memory only: a page refresh clears it, so reloading /test/run cannot silently
 // resurrect or restart an attempt (spec section 12). The runner consumes it once.
 
+/** A pending test plus the id of the set (or 'mixed') it was drawn from, so the
+ *  saved report is tagged to the right scope regardless of which questions landed. */
+interface PendingTest {
+  built: BuiltQuestion[]
+  setId: string
+}
+
 interface TestSessionValue {
-  takePending: () => BuiltQuestion[] | null
-  setPending: (built: BuiltQuestion[]) => void
+  takePending: () => PendingTest | null
+  setPending: (built: BuiltQuestion[], setId: string) => void
 }
 
 const Ctx = createContext<TestSessionValue | null>(null)
 
 export function TestSessionProvider({ children }: { children: ReactNode }) {
-  const pendingRef = useRef<BuiltQuestion[] | null>(null)
+  const pendingRef = useRef<PendingTest | null>(null)
   // state only to keep the provider identity stable; value uses refs.
   const [value] = useState<TestSessionValue>(() => ({
     takePending: () => {
@@ -21,8 +28,8 @@ export function TestSessionProvider({ children }: { children: ReactNode }) {
       pendingRef.current = null
       return p
     },
-    setPending: (built: BuiltQuestion[]) => {
-      pendingRef.current = built
+    setPending: (built: BuiltQuestion[], setId: string) => {
+      pendingRef.current = { built, setId }
     },
   }))
 

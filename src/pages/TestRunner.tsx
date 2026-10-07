@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { APP_TITLE, getSetIdForQuestion } from '../bank'
+import { APP_TITLE, DEFAULT_SET_ID } from '../bank'
 import { AnswerTypeBadge, DomainBadge } from '../components/Badge'
 import { OptionList } from '../components/OptionList'
 import { Palette, type PaletteStatus } from '../components/Palette'
@@ -42,6 +42,7 @@ export function TestRunner() {
   const initedRef = useRef(false)
   const builtRef = useRef<BuiltQuestion[] | null>(null)
   const selRef = useRef<Record<string, string[]>>({})
+  const setIdRef = useRef<string>(DEFAULT_SET_ID)
   builtRef.current = built
   selRef.current = selections
 
@@ -51,12 +52,13 @@ export function TestRunner() {
     if (initedRef.current) return
     initedRef.current = true
     const pending = takePending()
-    if (!pending || pending.length === 0) {
+    if (!pending || pending.built.length === 0) {
       nav('/test', { replace: true }) // reload / direct hit -> no silent new attempt
       return
     }
     startRef.current = Date.now()
-    setBuilt(pending)
+    setIdRef.current = pending.setId
+    setBuilt(pending.built)
   }, [nav, takePending])
 
   const finalize = useCallback(
@@ -97,7 +99,7 @@ export function TestRunner() {
         attemptId: newAttemptId(),
         timestamp: Date.now(),
         mode: 'test',
-        setId: getSetIdForQuestion(b[0].question.id),
+        setId: setIdRef.current,
         questionIds,
         optionOrders,
         selections,

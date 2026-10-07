@@ -55,5 +55,22 @@ export function getSetIdForQuestion(id: string): string {
   return setOfQuestion.get(id) ?? DEFAULT_SET_ID
 }
 
+// ---- Mixed test mode ----
+// A test-only pseudo-set that draws from every set at once. It is deliberately
+// NOT part of SETS (so it never appears in the Home switcher, Practice, or
+// validation); it exists only so a mixed test can be built and its reports tagged.
+
+export const MIXED_SET_ID = 'mixed'
+export const MIXED_SET_NAME = 'Mixed (All Sets)'
+
+/** Every question across all sets, combined. Ids are unique across sets, so a
+ *  test built from this pool can never repeat a question. */
+export const ALL_QUESTIONS: Question[] = SETS.flatMap((s) => s.questions)
+
+/** Human-readable name for a stored report's setId, including the mixed pseudo-set. */
+export function setNameFor(setId: string): string {
+  return setId === MIXED_SET_ID ? MIXED_SET_NAME : getSet(setId).name
+}
+
 /** Public app title. */
 export const APP_TITLE = 'SAP Basis Mock Test'

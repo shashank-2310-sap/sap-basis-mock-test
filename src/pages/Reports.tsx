@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { DEFAULT_SET_ID } from '../bank'
+import { DEFAULT_SET_ID, MIXED_SET_ID, MIXED_SET_NAME, SETS, setNameFor } from '../bank'
 import { useQuestionSet } from '../context/QuestionSetProvider'
 import { deleteReport, getAllReports } from '../lib/db'
 import { formatDateTime, formatDuration } from '../lib/format'
@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { cn } from '@/lib/utils'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -31,33 +32,68 @@ function Stat({ value, label }: { value: string | number; label: string }) {
 
 export function Reports() {
   const { set } = useQuestionSet()
+  const [scope, setScope] = useState<string>(set.id)
   const [reports, setReports] = useState<StoredReport[] | null>(null)
   const [deleteId, setDeleteId] = useState<string | null>(null)
 
+  const scopeName = setNameFor(scope)
+  const scopeOptions: { id: string; name: string }[] = [
+    ...SETS.map((s) => ({ id: s.id, name: s.name })),
+    { id: MIXED_SET_ID, name: MIXED_SET_NAME },
+  ]
+
   function refresh() {
     getAllReports().then((all) =>
-      setReports(all.filter((r) => r.mode === 'test' && (r.setId ?? DEFAULT_SET_ID) === set.id)),
+      setReports(all.filter((r) => r.mode === 'test' && (r.setId ?? DEFAULT_SET_ID) === scope)),
     )
   }
   useEffect(() => {
     refresh()
-    // Re-filter when the active set changes.
+    // Re-filter when the viewed scope changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [set.id])
+  }, [scope])
+
+  const scopePicker = (
+    <div role="radiogroup" aria-label="Report scope" className="inline-flex flex-wrap gap-1 rounded-lg border bg-muted p-1">
+      {scopeOptions.map((o) => {
+        const active = o.id === scope
+        return (
+          <button
+            key={o.id}
+            type="button"
+            role="radio"
+            aria-checked={active}
+            onClick={() => setScope(o.id)}
+            className={cn(
+              'rounded-md px-3 py-1.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+              active
+                ? 'bg-primary text-primary-foreground shadow'
+                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+            )}
+          >
+            {o.name}
+          </button>
+        )
+      })}
+    </div>
+  )
 
   if (reports === null) return <div className="p-8 text-center text-muted-foreground">Loading progress…</div>
 
   if (reports.length === 0) {
     return (
-      <Card className="p-8 text-center">
-        <CardTitle className="text-xl">No test attempts yet</CardTitle>
-        <p className="mt-2 text-muted-foreground">
-          Finish a mock test in <strong>{set.name}</strong> and your results will appear here.
-        </p>
-        <Button asChild className="mt-4 w-fit self-center">
-          <Link to="/test">Start a test</Link>
-        </Button>
-      </Card>
+      <div className="space-y-4">
+        {scopePicker}
+        <Card className="p-8 text-center">
+          <CardTitle className="text-xl">No test attempts yet</CardTitle>
+          <p className="mt-2 text-muted-foreground">
+            Finish a mock test in <strong>{scopeName}</strong> and your results will appear here.
+          </p>
+          <Button asChild className="mt-4 w-fit self-center">
+            <Link to="/test">Start a test</Link>
+          </Button>
+        </Card>
+      </div>
     )
   }
 
@@ -77,11 +113,12 @@ export function Reports() {
 
   return (
     <div className="space-y-6">
+      {scopePicker}
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl font-extrabold">Progress &amp; reports</CardTitle>
           <p className="text-sm text-muted-foreground">
-            {set.name} · switch sets on the Home page to see the other set's history.
+            {scopeName} · pick a scope above to see each set's (or the mixed pool's) history.
           </p>
         </CardHeader>
         <CardContent>
