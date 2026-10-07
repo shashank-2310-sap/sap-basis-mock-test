@@ -47,9 +47,6 @@ export function Layout({ children }: { children: ReactNode }) {
         </div>
       </header>
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
-      <footer className="border-t bg-card py-3 text-center text-xs text-muted-foreground">
-        {APP_TITLE} Platform · Made with ❤️ for ACD
-      </footer>
     </div>
   )
 }
