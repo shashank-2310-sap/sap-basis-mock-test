@@ -1697,7 +1697,7 @@
       "options": [
         {
           "id": "A",
-          "text": "Instance Controller"
+          "text": "Instance Controller (JSTART)"
         },
         {
           "id": "B",
@@ -1713,9 +1713,9 @@
         }
       ],
       "correct_answers": [
-        "D"
+        "A"
       ],
-      "why": "SAP Learning states sapstartsrv controls start/stop of SAP systems and instances."
+      "why": "Instance Controller: Within the Java Startup and Control Framework of an AS Java-based SAP system, the Instance Controller is the central controlling process that directly starts, monitors, and stops the individual Java server processes (jstart). \nsapstartsrv: Acts as the operating system-level monitoring and start service for the instance, but it delegates the actual cluster/server process management to the Instance Controller."
     },
     {
       "id": "C_TADM_23_Q057",
